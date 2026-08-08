@@ -46,7 +46,7 @@ def init_database():
     with open(strains_path, "r", encoding="utf-8") as f:
         reader = csv.DictReader(f)
         strain_rows = [
-            (row["Strain"], int(row["Uptake_Reactions"]), int(row["Secretion_Reactions"]), int(row["Total_Exchanged"]))
+            (row.get("Strain") or row.get("strain_name"), int(row.get("Uptake_Reactions", 0)), int(row.get("Secretion_Reactions", 0)), int(row.get("Total_Exchanged", 0)))
             for row in reader
         ]
         cursor.executemany(
@@ -61,7 +61,7 @@ def init_database():
     with open(metab_path, "r", encoding="utf-8") as f:
         reader = csv.DictReader(f)
         metab_rows = [
-            (row["Metabolite"], int(row["Uptake_By_Strains"]), int(row["Secreted_By_Strains"]), int(row["Total_Exchange"]))
+            (row.get("Metabolite") or row.get("metabolite_name"), int(row.get("Uptake_By_Strains", 0)), int(row.get("Secreted_By_Strains", 0)), int(row.get("Total_Exchange", 0)))
             for row in reader
         ]
         cursor.executemany(
@@ -76,7 +76,7 @@ def init_database():
     with open(scfa_path, "r", encoding="utf-8") as f:
         reader = csv.DictReader(f)
         scfa_rows = [
-            (row["SCFA"], int(row["Producer_Strains"]), int(row["Consumer_Strains"]), int(row["Total_Exchange"]), float(row["Max_Secretion"]))
+            (row.get("SCFA") or row.get("scfa_name"), int(row.get("Producer_Strains", 0)), int(row.get("Consumer_Strains", 0)), int(row.get("Total_Exchange", 0)), float(row.get("Max_Secretion", 0.0)))
             for row in reader
         ]
         cursor.executemany(
@@ -92,7 +92,12 @@ def init_database():
     with open(fluxes_path, "r", encoding="utf-8") as f:
         reader = csv.DictReader(f)
         flux_rows = [
-            (row["Strain"], row["Exchange_ID"], row["Metabolite_Name"], float(row["Flux_Value"]))
+            (
+                row.get("Strain") or row.get("strain_name") or row.get("strain"),
+                row.get("Exchange_ID") or row.get("exchange_id"),
+                row.get("Metabolite_Name") or row.get("metabolite_name"),
+                float(row.get("Flux") if row.get("Flux") is not None else (row.get("Flux_Value") if row.get("Flux_Value") is not None else row.get("flux", 0.0)))
+            )
             for row in reader
         ]
         cursor.executemany(

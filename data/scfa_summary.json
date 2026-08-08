@@ -1,0 +1,72 @@
+[
+  {
+    "SCFA": "Acetate",
+    "Producer_Strains": 3386,
+    "Consumer_Strains": 18,
+    "Total_Exchange": 3404,
+    "Max_Secretion": 1000.0,
+    "Max_Uptake": -924.751868,
+    "Mean_Secretion": 928.276,
+    "Mean_Uptake": -232.725
+  },
+  {
+    "SCFA": "Propionate",
+    "Producer_Strains": 1585,
+    "Consumer_Strains": 0,
+    "Total_Exchange": 1585,
+    "Max_Secretion": 1000.0,
+    "Max_Uptake": 0.0,
+    "Mean_Secretion": 953.914,
+    "Mean_Uptake": 0.0
+  },
+  {
+    "SCFA": "Butyrate",
+    "Producer_Strains": 269,
+    "Consumer_Strains": 57,
+    "Total_Exchange": 326,
+    "Max_Secretion": 1000.0,
+    "Max_Uptake": -967.050136,
+    "Mean_Secretion": 529.663,
+    "Mean_Uptake": -509.752
+  },
+  {
+    "SCFA": "Formate",
+    "Producer_Strains": 2878,
+    "Consumer_Strains": 80,
+    "Total_Exchange": 2958,
+    "Max_Secretion": 1000.0,
+    "Max_Uptake": -1000.0,
+    "Mean_Secretion": 881.387,
+    "Mean_Uptake": -337.968
+  },
+  {
+    "SCFA": "Isobutyrate, 2-Methylpropanoate",
+    "Producer_Strains": 17,
+    "Consumer_Strains": 1,
+    "Total_Exchange": 18,
+    "Max_Secretion": 1000.0,
+    "Max_Uptake": -480.778686,
+    "Mean_Secretion": 577.94,
+    "Mean_Uptake": -480.779
+  },
+  {
+    "SCFA": "2-methylbutyrate",
+    "Producer_Strains": 2,
+    "Consumer_Strains": 0,
+    "Total_Exchange": 2,
+    "Max_Secretion": 875.400626,
+    "Max_Uptake": 0.0,
+    "Mean_Secretion": 594.193,
+    "Mean_Uptake": 0.0
+  },
+  {
+    "SCFA": "Isovalerate, 3-Methylbutanoate",
+    "Producer_Strains": 7,
+    "Consumer_Strains": 2,
+    "Total_Exchange": 9,
+    "Max_Secretion": 326.305327,
+    "Max_Uptake": -166.249749,
+    "Mean_Secretion": 132.497,
+    "Mean_Uptake": -88.001
+  }
+]

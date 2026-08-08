@@ -1,0 +1,3080 @@
+[
+  {
+    "Metabolite": "(3,4-dihydroxyphenyl)acetate",
+    "Uptake_By_Strains": 299,
+    "Secreted_By_Strains": 5,
+    "Total_Exchange": 304
+  },
+  {
+    "Metabolite": "(Bis-(P-Hydroxyphenyl)-Pyridyl-2-Methane",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "(E)-5-(2-Bromovinyl)Uracil",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 63,
+    "Total_Exchange": 63
+  },
+  {
+    "Metabolite": "(R)-3-hydroxybutyrate",
+    "Uptake_By_Strains": 2,
+    "Secreted_By_Strains": 340,
+    "Total_Exchange": 342
+  },
+  {
+    "Metabolite": "(R)-Acetoin",
+    "Uptake_By_Strains": 496,
+    "Secreted_By_Strains": 65,
+    "Total_Exchange": 561
+  },
+  {
+    "Metabolite": "(R)-Pantothenate",
+    "Uptake_By_Strains": 3161,
+    "Secreted_By_Strains": 3,
+    "Total_Exchange": 3164
+  },
+  {
+    "Metabolite": "(S)-propane-1,2-diol",
+    "Uptake_By_Strains": 365,
+    "Secreted_By_Strains": 19,
+    "Total_Exchange": 384
+  },
+  {
+    "Metabolite": "1,2,4-Triaminobenzene",
+    "Uptake_By_Strains": 3,
+    "Secreted_By_Strains": 16,
+    "Total_Exchange": 19
+  },
+  {
+    "Metabolite": "1,2-Diacyl-sn-glycerol (dioctadecanoyl, n-C18:0)",
+    "Uptake_By_Strains": 369,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 370
+  },
+  {
+    "Metabolite": "1,4-Dihydroxy-2-naphthoate",
+    "Uptake_By_Strains": 136,
+    "Secreted_By_Strains": 37,
+    "Total_Exchange": 173
+  },
+  {
+    "Metabolite": "1,4-Dihydroxy-2-naphthoyl-CoA",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "1,5-Diaminopentane",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 7,
+    "Total_Exchange": 7
+  },
+  {
+    "Metabolite": "1-Propanol",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 2,
+    "Total_Exchange": 3
+  },
+  {
+    "Metabolite": "1-hydroxy S-ibuprofen",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "1-hydroxy S-ibuprofen-glucuronide",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "12-Dehydrocholate",
+    "Uptake_By_Strains": 6,
+    "Secreted_By_Strains": 3,
+    "Total_Exchange": 9
+  },
+  {
+    "Metabolite": "16-Glucuronide-estriol",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "2,2-Difluorodeoxyuridine",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 61,
+    "Total_Exchange": 61
+  },
+  {
+    "Metabolite": "2,3-dihydroxicinnamic acid",
+    "Uptake_By_Strains": 81,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 81
+  },
+  {
+    "Metabolite": "2-Dehydro-3-deoxy-D-gluconate",
+    "Uptake_By_Strains": 5,
+    "Secreted_By_Strains": 263,
+    "Total_Exchange": 268
+  },
+  {
+    "Metabolite": "2-Demethylmenaquinone 8",
+    "Uptake_By_Strains": 88,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 88
+  },
+  {
+    "Metabolite": "2-Hydroxyphenylacetate",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 2,
+    "Total_Exchange": 2
+  },
+  {
+    "Metabolite": "2-Oxobutanoate",
+    "Uptake_By_Strains": 1152,
+    "Secreted_By_Strains": 295,
+    "Total_Exchange": 1447
+  },
+  {
+    "Metabolite": "2-Oxoglutarate",
+    "Uptake_By_Strains": 546,
+    "Secreted_By_Strains": 1004,
+    "Total_Exchange": 1550
+  },
+  {
+    "Metabolite": "2-Succinyl-6-hydroxy-2,4-cyclohexadiene-1-carboxylate",
+    "Uptake_By_Strains": 2,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 2
+  },
+  {
+    "Metabolite": "2-Sulfamoylacetylphenol",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "2-Sulfamoylacetylphenol Glucuronide",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "2-deoxy-D-ribose",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "2-deoxyadenosine",
+    "Uptake_By_Strains": 834,
+    "Secreted_By_Strains": 138,
+    "Total_Exchange": 972
+  },
+  {
+    "Metabolite": "2-hydroxy-atorvastatin-acid / ortho-hydroxy-atorvastatin acid",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 3,
+    "Total_Exchange": 3
+  },
+  {
+    "Metabolite": "2-hydroxy-atorvastatin-acyl-glucuronide",
+    "Uptake_By_Strains": 3,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 3
+  },
+  {
+    "Metabolite": "2-methylbutyrate",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 2,
+    "Total_Exchange": 2
+  },
+  {
+    "Metabolite": "2-phenylethanamine",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "20,22-Dihydrodigitoxin",
+    "Uptake_By_Strains": 5,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 5
+  },
+  {
+    "Metabolite": "3-(2,3-Dihydroxyphenyl)propanoate",
+    "Uptake_By_Strains": 5,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 5
+  },
+  {
+    "Metabolite": "3-Dehydrochenodeoxycholate",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 3,
+    "Total_Exchange": 4
+  },
+  {
+    "Metabolite": "3-Dehydrocholate",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 3,
+    "Total_Exchange": 4
+  },
+  {
+    "Metabolite": "3-Hydroxy Carbamazepine Glucuronide",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "3-Hydroxycarbamazepine",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "3-Hydroxyphenylacetate",
+    "Uptake_By_Strains": 8,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 8
+  },
+  {
+    "Metabolite": "3-hydroxy S-ibuprofen",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 3,
+    "Total_Exchange": 3
+  },
+  {
+    "Metabolite": "3-hydroxy S-ibuprofen-glucuronide",
+    "Uptake_By_Strains": 3,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 3
+  },
+  {
+    "Metabolite": "3-methoxy-acetaminophen",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 55,
+    "Total_Exchange": 55
+  },
+  {
+    "Metabolite": "3-methyl-2-oxopentanoate",
+    "Uptake_By_Strains": 49,
+    "Secreted_By_Strains": 7,
+    "Total_Exchange": 56
+  },
+  {
+    "Metabolite": "3alpha,12alpha-Dihydroxy-7-oxo-5beta-cholanate",
+    "Uptake_By_Strains": 231,
+    "Secreted_By_Strains": 233,
+    "Total_Exchange": 464
+  },
+  {
+    "Metabolite": "4-Amino-5-hydroxymethyl-2-methylpyrimidine",
+    "Uptake_By_Strains": 14,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 14
+  },
+  {
+    "Metabolite": "4-Aminobenzoate",
+    "Uptake_By_Strains": 1444,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1444
+  },
+  {
+    "Metabolite": "4-Aminobenzoyl-Beta-Alanine",
+    "Uptake_By_Strains": 7,
+    "Secreted_By_Strains": 16,
+    "Total_Exchange": 23
+  },
+  {
+    "Metabolite": "4-Aminobutanoate",
+    "Uptake_By_Strains": 77,
+    "Secreted_By_Strains": 828,
+    "Total_Exchange": 905
+  },
+  {
+    "Metabolite": "4-Dehydroxytempol",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 3,
+    "Total_Exchange": 3
+  },
+  {
+    "Metabolite": "4-Dehydroxytempol 1-O-Glucuronide",
+    "Uptake_By_Strains": 3,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 3
+  },
+  {
+    "Metabolite": "4-Hydroxybenzyl Ketoprofen",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "4-Hydroxybenzyl Ketoprofen Glucuronide",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "4-hydroxybenzoate",
+    "Uptake_By_Strains": 69,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 70
+  },
+  {
+    "Metabolite": "4-hydroxyphenylacetate",
+    "Uptake_By_Strains": 11,
+    "Secreted_By_Strains": 24,
+    "Total_Exchange": 35
+  },
+  {
+    "Metabolite": "4hbz[e]",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "5,6,7,8-Tetrahydrofolate",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 2,
+    "Total_Exchange": 2
+  },
+  {
+    "Metabolite": "5,6-Dihydro-5-fluorouracil",
+    "Uptake_By_Strains": 73,
+    "Secreted_By_Strains": 232,
+    "Total_Exchange": 305
+  },
+  {
+    "Metabolite": "5-Aminopentanoate",
+    "Uptake_By_Strains": 2,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 2
+  },
+  {
+    "Metabolite": "5-Aminosalicylic Acid (Mesalamine)",
+    "Uptake_By_Strains": 61,
+    "Secreted_By_Strains": 21,
+    "Total_Exchange": 82
+  },
+  {
+    "Metabolite": "5-Fluorocytosine",
+    "Uptake_By_Strains": 135,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 135
+  },
+  {
+    "Metabolite": "5-Fluorouracil",
+    "Uptake_By_Strains": 221,
+    "Secreted_By_Strains": 183,
+    "Total_Exchange": 404
+  },
+  {
+    "Metabolite": "5-Hydroxy-Sulfapyridine",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 2,
+    "Total_Exchange": 2
+  },
+  {
+    "Metabolite": "5-Hydroxy-Sulfapyridine-O-Glucuronide",
+    "Uptake_By_Strains": 2,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 2
+  },
+  {
+    "Metabolite": "5-Methyltetrahydrofolate",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 4,
+    "Total_Exchange": 4
+  },
+  {
+    "Metabolite": "5-Methylthioadenosine",
+    "Uptake_By_Strains": 23,
+    "Secreted_By_Strains": 17,
+    "Total_Exchange": 40
+  },
+  {
+    "Metabolite": "5-hydroxy-L-tryptophan",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "6-hydroxy-fluvastatin",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 2,
+    "Total_Exchange": 2
+  },
+  {
+    "Metabolite": "6-hydroxy-fluvastatin-glucuronide",
+    "Uptake_By_Strains": 2,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 2
+  },
+  {
+    "Metabolite": "7-Amino Nitrozepam",
+    "Uptake_By_Strains": 535,
+    "Secreted_By_Strains": 688,
+    "Total_Exchange": 1223
+  },
+  {
+    "Metabolite": "7-Aminoclonazepam",
+    "Uptake_By_Strains": 252,
+    "Secreted_By_Strains": 663,
+    "Total_Exchange": 915
+  },
+  {
+    "Metabolite": "7-Dehydrochenodeoxycholate",
+    "Uptake_By_Strains": 186,
+    "Secreted_By_Strains": 177,
+    "Total_Exchange": 363
+  },
+  {
+    "Metabolite": "7-beta-OH-gliclazide",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "7-beta-OH-gliclazide-glucuronide",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "7-hydroxy-Efavirenz",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 3,
+    "Total_Exchange": 3
+  },
+  {
+    "Metabolite": "7-hydroxy-Efavirenz Glucuronide",
+    "Uptake_By_Strains": 3,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 3
+  },
+  {
+    "Metabolite": "8,14-Dihydroxyefavirenz",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 2,
+    "Total_Exchange": 2
+  },
+  {
+    "Metabolite": "8,14-Dihydroxyefavirenz Glucuronide",
+    "Uptake_By_Strains": 2,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 2
+  },
+  {
+    "Metabolite": "8-hydroxy-Efavirenz",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "8-hydroxy-Efavirenz Glucuronide",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "AM1c (cyclosporine)",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "AM1c-glucuronide (cyclosporine)",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "AMP",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Acetaldehyde",
+    "Uptake_By_Strains": 1455,
+    "Secreted_By_Strains": 717,
+    "Total_Exchange": 2172
+  },
+  {
+    "Metabolite": "Acetaminophen Glucuronide",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Acetate",
+    "Uptake_By_Strains": 18,
+    "Secreted_By_Strains": 3386,
+    "Total_Exchange": 3404
+  },
+  {
+    "Metabolite": "Acetoacetate",
+    "Uptake_By_Strains": 205,
+    "Secreted_By_Strains": 510,
+    "Total_Exchange": 715
+  },
+  {
+    "Metabolite": "Adenine",
+    "Uptake_By_Strains": 298,
+    "Secreted_By_Strains": 5,
+    "Total_Exchange": 303
+  },
+  {
+    "Metabolite": "Adenosine",
+    "Uptake_By_Strains": 1254,
+    "Secreted_By_Strains": 302,
+    "Total_Exchange": 1556
+  },
+  {
+    "Metabolite": "Adenosylcobalamin",
+    "Uptake_By_Strains": 755,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 755
+  },
+  {
+    "Metabolite": "Alginic acid, polymer of (LGulA)3 (ManA)3",
+    "Uptake_By_Strains": 3,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 3
+  },
+  {
+    "Metabolite": "Allantoin",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Amiodarone",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Amiodarone Glucuronide (M16)",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Ammonium",
+    "Uptake_By_Strains": 109,
+    "Secreted_By_Strains": 3242,
+    "Total_Exchange": 3351
+  },
+  {
+    "Metabolite": "Amylopectin, 900 repeat units",
+    "Uptake_By_Strains": 20,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 20
+  },
+  {
+    "Metabolite": "Arabinotriose",
+    "Uptake_By_Strains": 203,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 203
+  },
+  {
+    "Metabolite": "Arabinoxylan",
+    "Uptake_By_Strains": 7,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 7
+  },
+  {
+    "Metabolite": "Arbutin",
+    "Uptake_By_Strains": 418,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 418
+  },
+  {
+    "Metabolite": "BILR M12",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "BILR M14",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "BILR M15",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "BILR M7",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Balsalazide",
+    "Uptake_By_Strains": 16,
+    "Secreted_By_Strains": 7,
+    "Total_Exchange": 23
+  },
+  {
+    "Metabolite": "Benzamide",
+    "Uptake_By_Strains": 122,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 122
+  },
+  {
+    "Metabolite": "Benzoic Acid Glucuronide",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Biotin",
+    "Uptake_By_Strains": 8,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 8
+  },
+  {
+    "Metabolite": "Bis-(P-Hydroxy-Phenyl)-Pyridyl-2-Methane Glucuronide",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Brivudine",
+    "Uptake_By_Strains": 23,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 23
+  },
+  {
+    "Metabolite": "Butyrate",
+    "Uptake_By_Strains": 57,
+    "Secreted_By_Strains": 269,
+    "Total_Exchange": 326
+  },
+  {
+    "Metabolite": "CD6168",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 133,
+    "Total_Exchange": 133
+  },
+  {
+    "Metabolite": "CD6168 Glucuronide",
+    "Uptake_By_Strains": 133,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 133
+  },
+  {
+    "Metabolite": "Carbon dioxide",
+    "Uptake_By_Strains": 200,
+    "Secreted_By_Strains": 3251,
+    "Total_Exchange": 3451
+  },
+  {
+    "Metabolite": "Chicory inulin",
+    "Uptake_By_Strains": 91,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 91
+  },
+  {
+    "Metabolite": "Chloramphenicol",
+    "Uptake_By_Strains": 55,
+    "Secreted_By_Strains": 943,
+    "Total_Exchange": 998
+  },
+  {
+    "Metabolite": "Chloride",
+    "Uptake_By_Strains": 3464,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 3464
+  },
+  {
+    "Metabolite": "Cholate",
+    "Uptake_By_Strains": 240,
+    "Secreted_By_Strains": 496,
+    "Total_Exchange": 736
+  },
+  {
+    "Metabolite": "Choline",
+    "Uptake_By_Strains": 203,
+    "Secreted_By_Strains": 3,
+    "Total_Exchange": 206
+  },
+  {
+    "Metabolite": "Choline sulfate",
+    "Uptake_By_Strains": 4,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 4
+  },
+  {
+    "Metabolite": "Citrate",
+    "Uptake_By_Strains": 994,
+    "Secreted_By_Strains": 114,
+    "Total_Exchange": 1108
+  },
+  {
+    "Metabolite": "Clonazepam",
+    "Uptake_By_Strains": 663,
+    "Secreted_By_Strains": 252,
+    "Total_Exchange": 915
+  },
+  {
+    "Metabolite": "Clopidogrel Acyl-Beta-D-Glucuronide",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Clopidogrel Carboxylic Acid",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Co2+",
+    "Uptake_By_Strains": 3464,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 3464
+  },
+  {
+    "Metabolite": "Cob(I)alamin",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 755,
+    "Total_Exchange": 755
+  },
+  {
+    "Metabolite": "Coprostanol",
+    "Uptake_By_Strains": 2,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 2
+  },
+  {
+    "Metabolite": "Core 4",
+    "Uptake_By_Strains": 4,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 4
+  },
+  {
+    "Metabolite": "Cu2+",
+    "Uptake_By_Strains": 3464,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 3464
+  },
+  {
+    "Metabolite": "Cyanate",
+    "Uptake_By_Strains": 4,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 4
+  },
+  {
+    "Metabolite": "Cytidine",
+    "Uptake_By_Strains": 1694,
+    "Secreted_By_Strains": 20,
+    "Total_Exchange": 1714
+  },
+  {
+    "Metabolite": "D-Alanyl-D-alanine",
+    "Uptake_By_Strains": 6,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 6
+  },
+  {
+    "Metabolite": "D-Arabinose",
+    "Uptake_By_Strains": 18,
+    "Secreted_By_Strains": 134,
+    "Total_Exchange": 152
+  },
+  {
+    "Metabolite": "D-Fructose",
+    "Uptake_By_Strains": 384,
+    "Secreted_By_Strains": 680,
+    "Total_Exchange": 1064
+  },
+  {
+    "Metabolite": "D-Fructuronate",
+    "Uptake_By_Strains": 2,
+    "Secreted_By_Strains": 445,
+    "Total_Exchange": 447
+  },
+  {
+    "Metabolite": "D-Galactarate",
+    "Uptake_By_Strains": 7,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 7
+  },
+  {
+    "Metabolite": "D-Galactose",
+    "Uptake_By_Strains": 63,
+    "Secreted_By_Strains": 719,
+    "Total_Exchange": 782
+  },
+  {
+    "Metabolite": "D-Galacturonate",
+    "Uptake_By_Strains": 19,
+    "Secreted_By_Strains": 6,
+    "Total_Exchange": 25
+  },
+  {
+    "Metabolite": "D-Glucosamine",
+    "Uptake_By_Strains": 540,
+    "Secreted_By_Strains": 22,
+    "Total_Exchange": 562
+  },
+  {
+    "Metabolite": "D-Glucose 6-phosphate",
+    "Uptake_By_Strains": 767,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 767
+  },
+  {
+    "Metabolite": "D-Glutamate",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 2
+  },
+  {
+    "Metabolite": "D-Mannitol",
+    "Uptake_By_Strains": 46,
+    "Secreted_By_Strains": 3,
+    "Total_Exchange": 49
+  },
+  {
+    "Metabolite": "D-Mannose",
+    "Uptake_By_Strains": 115,
+    "Secreted_By_Strains": 2,
+    "Total_Exchange": 117
+  },
+  {
+    "Metabolite": "D-Mannose 6-phosphate",
+    "Uptake_By_Strains": 968,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 968
+  },
+  {
+    "Metabolite": "D-Mannuronic acid",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 3,
+    "Total_Exchange": 3
+  },
+  {
+    "Metabolite": "D-alanine",
+    "Uptake_By_Strains": 299,
+    "Secreted_By_Strains": 814,
+    "Total_Exchange": 1113
+  },
+  {
+    "Metabolite": "D-glucarate(2-)",
+    "Uptake_By_Strains": 22,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 22
+  },
+  {
+    "Metabolite": "D-glucitol",
+    "Uptake_By_Strains": 37,
+    "Secreted_By_Strains": 4,
+    "Total_Exchange": 41
+  },
+  {
+    "Metabolite": "D-gluconate",
+    "Uptake_By_Strains": 176,
+    "Secreted_By_Strains": 524,
+    "Total_Exchange": 700
+  },
+  {
+    "Metabolite": "D-glucose",
+    "Uptake_By_Strains": 914,
+    "Secreted_By_Strains": 51,
+    "Total_Exchange": 965
+  },
+  {
+    "Metabolite": "D-glucuronate",
+    "Uptake_By_Strains": 42,
+    "Secreted_By_Strains": 1026,
+    "Total_Exchange": 1068
+  },
+  {
+    "Metabolite": "D-lactate",
+    "Uptake_By_Strains": 132,
+    "Secreted_By_Strains": 1639,
+    "Total_Exchange": 1771
+  },
+  {
+    "Metabolite": "D-ribose",
+    "Uptake_By_Strains": 25,
+    "Secreted_By_Strains": 5,
+    "Total_Exchange": 30
+  },
+  {
+    "Metabolite": "Deleobuvir",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 190,
+    "Total_Exchange": 190
+  },
+  {
+    "Metabolite": "Deleobuvir Glucuronide",
+    "Uptake_By_Strains": 190,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 190
+  },
+  {
+    "Metabolite": "Deoxycytidine",
+    "Uptake_By_Strains": 192,
+    "Secreted_By_Strains": 16,
+    "Total_Exchange": 208
+  },
+  {
+    "Metabolite": "Deoxyguanosine",
+    "Uptake_By_Strains": 812,
+    "Secreted_By_Strains": 3,
+    "Total_Exchange": 815
+  },
+  {
+    "Metabolite": "Deoxyinosine",
+    "Uptake_By_Strains": 673,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 673
+  },
+  {
+    "Metabolite": "Deoxyuridine",
+    "Uptake_By_Strains": 872,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 872
+  },
+  {
+    "Metabolite": "Dephospho-CoA",
+    "Uptake_By_Strains": 22,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 22
+  },
+  {
+    "Metabolite": "Desmethylnoralfentanil (AM6)",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Desmethylnoralfentanil Glucuronide (AM6 Glucuronide)",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Dextran 40, 1,6-alpha-D-Glucan",
+    "Uptake_By_Strains": 4,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 4
+  },
+  {
+    "Metabolite": "Dextrin",
+    "Uptake_By_Strains": 31,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 31
+  },
+  {
+    "Metabolite": "Dextrorphan",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Dextrorphan O-Glucuronide",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Diacetyl",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 37,
+    "Total_Exchange": 37
+  },
+  {
+    "Metabolite": "Digitoxin",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 5,
+    "Total_Exchange": 5
+  },
+  {
+    "Metabolite": "Digoxin",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 7,
+    "Total_Exchange": 7
+  },
+  {
+    "Metabolite": "Dihydrodigoxin",
+    "Uptake_By_Strains": 7,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 7
+  },
+  {
+    "Metabolite": "Dimer GalNAc-GlcA",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 2,
+    "Total_Exchange": 2
+  },
+  {
+    "Metabolite": "Dimer GalNAc-IdoA",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Dimer GalNAc-IdoA2S",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Dimer GalNAc4S-GlcA",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Dimer GalNAc4S-IdoA2S",
+    "Uptake_By_Strains": 2,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 2
+  },
+  {
+    "Metabolite": "Dimethyl sulfide",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 232,
+    "Total_Exchange": 232
+  },
+  {
+    "Metabolite": "Dimethyl sulfoxide",
+    "Uptake_By_Strains": 232,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 232
+  },
+  {
+    "Metabolite": "Diphosphate",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 1795,
+    "Total_Exchange": 1795
+  },
+  {
+    "Metabolite": "Donepezil Metabolite M14",
+    "Uptake_By_Strains": 2,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 2
+  },
+  {
+    "Metabolite": "Donepezil Metabolite M9",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 2,
+    "Total_Exchange": 2
+  },
+  {
+    "Metabolite": "Dopamine",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 5,
+    "Total_Exchange": 6
+  },
+  {
+    "Metabolite": "Efavirenz",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 2,
+    "Total_Exchange": 2
+  },
+  {
+    "Metabolite": "Efavirenz Glucuronide",
+    "Uptake_By_Strains": 2,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 2
+  },
+  {
+    "Metabolite": "Eltrombopag M3 (Glucuronide Conjugate)",
+    "Uptake_By_Strains": 1115,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1115
+  },
+  {
+    "Metabolite": "Ethanol",
+    "Uptake_By_Strains": 143,
+    "Secreted_By_Strains": 1680,
+    "Total_Exchange": 1823
+  },
+  {
+    "Metabolite": "Ethanolamine",
+    "Uptake_By_Strains": 191,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 191
+  },
+  {
+    "Metabolite": "Etravarine Dihydroxylated (M4, M5, M6)",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Etravarine Dihydroxylated Glucuronide",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Fe2+",
+    "Uptake_By_Strains": 1765,
+    "Secreted_By_Strains": 2,
+    "Total_Exchange": 1767
+  },
+  {
+    "Metabolite": "Fe3+",
+    "Uptake_By_Strains": 2999,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 2999
+  },
+  {
+    "Metabolite": "Folate",
+    "Uptake_By_Strains": 1141,
+    "Secreted_By_Strains": 8,
+    "Total_Exchange": 1149
+  },
+  {
+    "Metabolite": "Formate",
+    "Uptake_By_Strains": 80,
+    "Secreted_By_Strains": 2878,
+    "Total_Exchange": 2958
+  },
+  {
+    "Metabolite": "Fumarate",
+    "Uptake_By_Strains": 1020,
+    "Secreted_By_Strains": 612,
+    "Total_Exchange": 1632
+  },
+  {
+    "Metabolite": "Galantamine",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 2,
+    "Total_Exchange": 2
+  },
+  {
+    "Metabolite": "Galantamine Glucuronide",
+    "Uptake_By_Strains": 2,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 2
+  },
+  {
+    "Metabolite": "Gemcitabine",
+    "Uptake_By_Strains": 61,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 61
+  },
+  {
+    "Metabolite": "Gemfibrozil M3 (Benzoic Acid Metabolite)",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Glucosamine 2,6-sulfate",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 6,
+    "Total_Exchange": 6
+  },
+  {
+    "Metabolite": "Glutarate",
+    "Uptake_By_Strains": 4,
+    "Secreted_By_Strains": 3,
+    "Total_Exchange": 7
+  },
+  {
+    "Metabolite": "Gly-Cys",
+    "Uptake_By_Strains": 711,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 711
+  },
+  {
+    "Metabolite": "Glycerol",
+    "Uptake_By_Strains": 230,
+    "Secreted_By_Strains": 2494,
+    "Total_Exchange": 2724
+  },
+  {
+    "Metabolite": "Glycerol 3-phosphate",
+    "Uptake_By_Strains": 1618,
+    "Secreted_By_Strains": 4,
+    "Total_Exchange": 1622
+  },
+  {
+    "Metabolite": "Glycine",
+    "Uptake_By_Strains": 196,
+    "Secreted_By_Strains": 1681,
+    "Total_Exchange": 1877
+  },
+  {
+    "Metabolite": "Glycodeoxycholic Acid",
+    "Uptake_By_Strains": 29,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 29
+  },
+  {
+    "Metabolite": "Glycyl-L-asparagine",
+    "Uptake_By_Strains": 1041,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1041
+  },
+  {
+    "Metabolite": "Glycyl-L-aspartate",
+    "Uptake_By_Strains": 11,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 11
+  },
+  {
+    "Metabolite": "Glycyl-L-glutamate",
+    "Uptake_By_Strains": 13,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 13
+  },
+  {
+    "Metabolite": "Glycyl-L-glutamine",
+    "Uptake_By_Strains": 144,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 144
+  },
+  {
+    "Metabolite": "Glycyl-L-methionine",
+    "Uptake_By_Strains": 316,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 316
+  },
+  {
+    "Metabolite": "Glycyl-L-tyrosine",
+    "Uptake_By_Strains": 734,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 734
+  },
+  {
+    "Metabolite": "Glycylleucine",
+    "Uptake_By_Strains": 2114,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 2114
+  },
+  {
+    "Metabolite": "Glycylphenylalanine",
+    "Uptake_By_Strains": 794,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 794
+  },
+  {
+    "Metabolite": "Glycylproline",
+    "Uptake_By_Strains": 466,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 466
+  },
+  {
+    "Metabolite": "Guanine",
+    "Uptake_By_Strains": 524,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 524
+  },
+  {
+    "Metabolite": "Guanosine",
+    "Uptake_By_Strains": 331,
+    "Secreted_By_Strains": 768,
+    "Total_Exchange": 1099
+  },
+  {
+    "Metabolite": "Heparan sulfate degradation product 1",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 6,
+    "Total_Exchange": 6
+  },
+  {
+    "Metabolite": "Heparan sulfate degradation product 11",
+    "Uptake_By_Strains": 8,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 8
+  },
+  {
+    "Metabolite": "Heparan sulfate degradation product 12",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 8,
+    "Total_Exchange": 8
+  },
+  {
+    "Metabolite": "Heparan sulfate degradation product 2",
+    "Uptake_By_Strains": 4,
+    "Secreted_By_Strains": 4,
+    "Total_Exchange": 8
+  },
+  {
+    "Metabolite": "Heparan sulfate degradation product 5",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Heparan sulfate degradation product 6",
+    "Uptake_By_Strains": 9,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 10
+  },
+  {
+    "Metabolite": "Heparan sulfate degradation product 7",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 7,
+    "Total_Exchange": 7
+  },
+  {
+    "Metabolite": "Heparan sulfate degradation product 9",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Hesperetin",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 27,
+    "Total_Exchange": 27
+  },
+  {
+    "Metabolite": "Hesperetin 3,7-Diglucuronide",
+    "Uptake_By_Strains": 27,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 27
+  },
+  {
+    "Metabolite": "Hesperetin 3-O-Sulfate",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Hesperetin 7-O-Glucuronide 3-Sulfate",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Hexadecanoate (n-C16:0)",
+    "Uptake_By_Strains": 4,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 4
+  },
+  {
+    "Metabolite": "Hydrogen",
+    "Uptake_By_Strains": 765,
+    "Secreted_By_Strains": 349,
+    "Total_Exchange": 1114
+  },
+  {
+    "Metabolite": "Hydrogen peroxide",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Hydrogen sulfide",
+    "Uptake_By_Strains": 235,
+    "Secreted_By_Strains": 234,
+    "Total_Exchange": 469
+  },
+  {
+    "Metabolite": "Hydroxy Ropinirole",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Hypoxanthine",
+    "Uptake_By_Strains": 703,
+    "Secreted_By_Strains": 529,
+    "Total_Exchange": 1232
+  },
+  {
+    "Metabolite": "Indole",
+    "Uptake_By_Strains": 596,
+    "Secreted_By_Strains": 102,
+    "Total_Exchange": 698
+  },
+  {
+    "Metabolite": "Inosine",
+    "Uptake_By_Strains": 431,
+    "Secreted_By_Strains": 337,
+    "Total_Exchange": 768
+  },
+  {
+    "Metabolite": "Isethionic acid",
+    "Uptake_By_Strains": 2,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 2
+  },
+  {
+    "Metabolite": "Isobutyrate, 2-Methylpropanoate",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 17,
+    "Total_Exchange": 18
+  },
+  {
+    "Metabolite": "Isocaproate",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 7,
+    "Total_Exchange": 7
+  },
+  {
+    "Metabolite": "Isochenodeoxycholate",
+    "Uptake_By_Strains": 2,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 2
+  },
+  {
+    "Metabolite": "Isocholate",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Isoniazid",
+    "Uptake_By_Strains": 18,
+    "Secreted_By_Strains": 799,
+    "Total_Exchange": 817
+  },
+  {
+    "Metabolite": "Isovalerate, 3-Methylbutanoate",
+    "Uptake_By_Strains": 2,
+    "Secreted_By_Strains": 7,
+    "Total_Exchange": 9
+  },
+  {
+    "Metabolite": "Kestopentaose (4 fru, 1 glc inulin-type fructo-oligosaccharide)",
+    "Uptake_By_Strains": 33,
+    "Secreted_By_Strains": 6,
+    "Total_Exchange": 39
+  },
+  {
+    "Metabolite": "Kestose (2 fru, 1 glc inulin-type fructo-oligosaccharide)",
+    "Uptake_By_Strains": 2,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 2
+  },
+  {
+    "Metabolite": "Konjac glucomannan",
+    "Uptake_By_Strains": 4,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 4
+  },
+  {
+    "Metabolite": "L-Carnitine",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 3,
+    "Total_Exchange": 3
+  },
+  {
+    "Metabolite": "L-Guluronic acid",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 3,
+    "Total_Exchange": 3
+  },
+  {
+    "Metabolite": "L-Idonate",
+    "Uptake_By_Strains": 28,
+    "Secreted_By_Strains": 124,
+    "Total_Exchange": 152
+  },
+  {
+    "Metabolite": "L-Methionine Sulfoxide",
+    "Uptake_By_Strains": 166,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 166
+  },
+  {
+    "Metabolite": "L-Norvaline",
+    "Uptake_By_Strains": 2,
+    "Secreted_By_Strains": 5,
+    "Total_Exchange": 7
+  },
+  {
+    "Metabolite": "L-Rhamnose",
+    "Uptake_By_Strains": 40,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 40
+  },
+  {
+    "Metabolite": "L-alanine",
+    "Uptake_By_Strains": 844,
+    "Secreted_By_Strains": 1810,
+    "Total_Exchange": 2654
+  },
+  {
+    "Metabolite": "L-alanyl-L-aspartate",
+    "Uptake_By_Strains": 48,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 48
+  },
+  {
+    "Metabolite": "L-alanyl-L-glutamate",
+    "Uptake_By_Strains": 57,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 57
+  },
+  {
+    "Metabolite": "L-alanyl-L-glutamine",
+    "Uptake_By_Strains": 543,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 543
+  },
+  {
+    "Metabolite": "L-alanyl-L-histidine",
+    "Uptake_By_Strains": 397,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 397
+  },
+  {
+    "Metabolite": "L-alanyl-L-leucine",
+    "Uptake_By_Strains": 75,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 75
+  },
+  {
+    "Metabolite": "L-alanyl-L-threonine",
+    "Uptake_By_Strains": 729,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 729
+  },
+  {
+    "Metabolite": "L-alanylglycine",
+    "Uptake_By_Strains": 3,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 3
+  },
+  {
+    "Metabolite": "L-arabinose",
+    "Uptake_By_Strains": 5,
+    "Secreted_By_Strains": 211,
+    "Total_Exchange": 216
+  },
+  {
+    "Metabolite": "L-arginine",
+    "Uptake_By_Strains": 3047,
+    "Secreted_By_Strains": 26,
+    "Total_Exchange": 3073
+  },
+  {
+    "Metabolite": "L-asparagine",
+    "Uptake_By_Strains": 1993,
+    "Secreted_By_Strains": 3,
+    "Total_Exchange": 1996
+  },
+  {
+    "Metabolite": "L-aspartate",
+    "Uptake_By_Strains": 828,
+    "Secreted_By_Strains": 421,
+    "Total_Exchange": 1249
+  },
+  {
+    "Metabolite": "L-cysteine",
+    "Uptake_By_Strains": 1335,
+    "Secreted_By_Strains": 29,
+    "Total_Exchange": 1364
+  },
+  {
+    "Metabolite": "L-cysteinylglycine",
+    "Uptake_By_Strains": 2478,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 2478
+  },
+  {
+    "Metabolite": "L-dopa",
+    "Uptake_By_Strains": 5,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 5
+  },
+  {
+    "Metabolite": "L-fucose",
+    "Uptake_By_Strains": 37,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 38
+  },
+  {
+    "Metabolite": "L-glutamate",
+    "Uptake_By_Strains": 1607,
+    "Secreted_By_Strains": 833,
+    "Total_Exchange": 2440
+  },
+  {
+    "Metabolite": "L-glutamine",
+    "Uptake_By_Strains": 610,
+    "Secreted_By_Strains": 320,
+    "Total_Exchange": 930
+  },
+  {
+    "Metabolite": "L-histidine",
+    "Uptake_By_Strains": 2924,
+    "Secreted_By_Strains": 24,
+    "Total_Exchange": 2948
+  },
+  {
+    "Metabolite": "L-iduronate",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "L-isoleucine",
+    "Uptake_By_Strains": 3106,
+    "Secreted_By_Strains": 86,
+    "Total_Exchange": 3192
+  },
+  {
+    "Metabolite": "L-lactate",
+    "Uptake_By_Strains": 143,
+    "Secreted_By_Strains": 1860,
+    "Total_Exchange": 2003
+  },
+  {
+    "Metabolite": "L-leucine",
+    "Uptake_By_Strains": 1718,
+    "Secreted_By_Strains": 1253,
+    "Total_Exchange": 2971
+  },
+  {
+    "Metabolite": "L-lysine",
+    "Uptake_By_Strains": 2735,
+    "Secreted_By_Strains": 25,
+    "Total_Exchange": 2760
+  },
+  {
+    "Metabolite": "L-malate",
+    "Uptake_By_Strains": 354,
+    "Secreted_By_Strains": 823,
+    "Total_Exchange": 1177
+  },
+  {
+    "Metabolite": "L-methionine",
+    "Uptake_By_Strains": 725,
+    "Secreted_By_Strains": 7,
+    "Total_Exchange": 732
+  },
+  {
+    "Metabolite": "L-methionine-R-sulfoxide",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "L-methionyl-L-alanine",
+    "Uptake_By_Strains": 1261,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1261
+  },
+  {
+    "Metabolite": "L-phenylalanine",
+    "Uptake_By_Strains": 2369,
+    "Secreted_By_Strains": 61,
+    "Total_Exchange": 2430
+  },
+  {
+    "Metabolite": "L-proline",
+    "Uptake_By_Strains": 2664,
+    "Secreted_By_Strains": 13,
+    "Total_Exchange": 2677
+  },
+  {
+    "Metabolite": "L-serine",
+    "Uptake_By_Strains": 2713,
+    "Secreted_By_Strains": 327,
+    "Total_Exchange": 3040
+  },
+  {
+    "Metabolite": "L-threonine",
+    "Uptake_By_Strains": 2496,
+    "Secreted_By_Strains": 13,
+    "Total_Exchange": 2509
+  },
+  {
+    "Metabolite": "L-tryptophan",
+    "Uptake_By_Strains": 2179,
+    "Secreted_By_Strains": 197,
+    "Total_Exchange": 2376
+  },
+  {
+    "Metabolite": "L-tyrosine",
+    "Uptake_By_Strains": 2535,
+    "Secreted_By_Strains": 5,
+    "Total_Exchange": 2540
+  },
+  {
+    "Metabolite": "L-valine",
+    "Uptake_By_Strains": 2533,
+    "Secreted_By_Strains": 382,
+    "Total_Exchange": 2915
+  },
+  {
+    "Metabolite": "Lactam N-Glucuronide Of R406",
+    "Uptake_By_Strains": 3,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 3
+  },
+  {
+    "Metabolite": "Lactose",
+    "Uptake_By_Strains": 27,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 27
+  },
+  {
+    "Metabolite": "Lactulose",
+    "Uptake_By_Strains": 422,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 422
+  },
+  {
+    "Metabolite": "Laminaribiose",
+    "Uptake_By_Strains": 2,
+    "Secreted_By_Strains": 4,
+    "Total_Exchange": 6
+  },
+  {
+    "Metabolite": "Larch arabinogalactan",
+    "Uptake_By_Strains": 6,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 6
+  },
+  {
+    "Metabolite": "Lichenin from Icelandic moss",
+    "Uptake_By_Strains": 2,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 2
+  },
+  {
+    "Metabolite": "Losartan",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 2,
+    "Total_Exchange": 2
+  },
+  {
+    "Metabolite": "Losartan-N1-glucuronide",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Losartan-N2-glucuronide / Losartan-M7",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "M3 Glucuronide",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Malonate",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 7,
+    "Total_Exchange": 7
+  },
+  {
+    "Metabolite": "Maltohexaose",
+    "Uptake_By_Strains": 56,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 56
+  },
+  {
+    "Metabolite": "Maltose",
+    "Uptake_By_Strains": 76,
+    "Secreted_By_Strains": 4,
+    "Total_Exchange": 80
+  },
+  {
+    "Metabolite": "Melibiose",
+    "Uptake_By_Strains": 229,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 229
+  },
+  {
+    "Metabolite": "Menaquinone 7",
+    "Uptake_By_Strains": 599,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 599
+  },
+  {
+    "Metabolite": "Menaquinone 8",
+    "Uptake_By_Strains": 2583,
+    "Secreted_By_Strains": 3,
+    "Total_Exchange": 2586
+  },
+  {
+    "Metabolite": "Methane",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Methanethiol",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 2,
+    "Total_Exchange": 2
+  },
+  {
+    "Metabolite": "Midazolam",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Midazolam-Glucuronide",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Mn2+",
+    "Uptake_By_Strains": 3464,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 3464
+  },
+  {
+    "Metabolite": "N(alpha)-Benzyloxycarbonyl-L-leucine",
+    "Uptake_By_Strains": 5,
+    "Secreted_By_Strains": 34,
+    "Total_Exchange": 39
+  },
+  {
+    "Metabolite": "N-(2-Hydroxymethyl-3-Chloro-4-Hydroxyphenyl)-Anthranilic Acid",
+    "Uptake_By_Strains": 2,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 2
+  },
+  {
+    "Metabolite": "N-Acetyl-5-Aminosalicylic Acid",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 57,
+    "Total_Exchange": 57
+  },
+  {
+    "Metabolite": "N-Acetylisoniazid",
+    "Uptake_By_Strains": 799,
+    "Secreted_By_Strains": 18,
+    "Total_Exchange": 817
+  },
+  {
+    "Metabolite": "N-acetyl-D-galactosamine",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "N-acetyl-D-glucosamine",
+    "Uptake_By_Strains": 219,
+    "Secreted_By_Strains": 2,
+    "Total_Exchange": 221
+  },
+  {
+    "Metabolite": "N-acetyl-D-mannosamine",
+    "Uptake_By_Strains": 9,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 9
+  },
+  {
+    "Metabolite": "N-acetylneuraminate",
+    "Uptake_By_Strains": 89,
+    "Secreted_By_Strains": 2,
+    "Total_Exchange": 91
+  },
+  {
+    "Metabolite": "NMN",
+    "Uptake_By_Strains": 2151,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 2151
+  },
+  {
+    "Metabolite": "Neoprontosil",
+    "Uptake_By_Strains": 9,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 9
+  },
+  {
+    "Metabolite": "Nicotinamide",
+    "Uptake_By_Strains": 64,
+    "Secreted_By_Strains": 1093,
+    "Total_Exchange": 1157
+  },
+  {
+    "Metabolite": "Nicotinate",
+    "Uptake_By_Strains": 851,
+    "Secreted_By_Strains": 272,
+    "Total_Exchange": 1123
+  },
+  {
+    "Metabolite": "Nitrate",
+    "Uptake_By_Strains": 515,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 515
+  },
+  {
+    "Metabolite": "Nitrazepam, Benzalin, Neozepam",
+    "Uptake_By_Strains": 688,
+    "Secreted_By_Strains": 535,
+    "Total_Exchange": 1223
+  },
+  {
+    "Metabolite": "Nitric oxide",
+    "Uptake_By_Strains": 33,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 34
+  },
+  {
+    "Metabolite": "Nitrite",
+    "Uptake_By_Strains": 221,
+    "Secreted_By_Strains": 401,
+    "Total_Exchange": 622
+  },
+  {
+    "Metabolite": "Nitrosochloramphenicol",
+    "Uptake_By_Strains": 943,
+    "Secreted_By_Strains": 55,
+    "Total_Exchange": 998
+  },
+  {
+    "Metabolite": "Nitrous oxide",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 33,
+    "Total_Exchange": 34
+  },
+  {
+    "Metabolite": "Norverapamil",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 523,
+    "Total_Exchange": 523
+  },
+  {
+    "Metabolite": "Norverapamil Glucuronide",
+    "Uptake_By_Strains": 523,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 523
+  },
+  {
+    "Metabolite": "Not degradable product CSABCPASE_A/B, Gal4S-Gal-Xyl-L-Ser-protein",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Nw 1689 (N-Dealkylated Safinamide)",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Nw 1689 Acyl Glucuronide",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "O-Succinylbenzoyl-CoA",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "O2",
+    "Uptake_By_Strains": 3019,
+    "Secreted_By_Strains": 4,
+    "Total_Exchange": 3023
+  },
+  {
+    "Metabolite": "Oat spelt xylan",
+    "Uptake_By_Strains": 7,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 7
+  },
+  {
+    "Metabolite": "Olsalazine",
+    "Uptake_By_Strains": 15,
+    "Secreted_By_Strains": 6,
+    "Total_Exchange": 21
+  },
+  {
+    "Metabolite": "Ornithine",
+    "Uptake_By_Strains": 647,
+    "Secreted_By_Strains": 927,
+    "Total_Exchange": 1574
+  },
+  {
+    "Metabolite": "Orotate",
+    "Uptake_By_Strains": 55,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 55
+  },
+  {
+    "Metabolite": "Oxaloacetate",
+    "Uptake_By_Strains": 228,
+    "Secreted_By_Strains": 36,
+    "Total_Exchange": 264
+  },
+  {
+    "Metabolite": "Oxidized glutathione",
+    "Uptake_By_Strains": 114,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 114
+  },
+  {
+    "Metabolite": "Phenol",
+    "Uptake_By_Strains": 3,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 3
+  },
+  {
+    "Metabolite": "Pimelate",
+    "Uptake_By_Strains": 2,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 2
+  },
+  {
+    "Metabolite": "Probenecid",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Probenecid Acyl Beta-D-Glucuronide",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Produced biomass",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 3464,
+    "Total_Exchange": 3464
+  },
+  {
+    "Metabolite": "Prontosil",
+    "Uptake_By_Strains": 16,
+    "Secreted_By_Strains": 3,
+    "Total_Exchange": 19
+  },
+  {
+    "Metabolite": "Propanal",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 9,
+    "Total_Exchange": 9
+  },
+  {
+    "Metabolite": "Propane-1,3-diol",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 21,
+    "Total_Exchange": 21
+  },
+  {
+    "Metabolite": "Propionate",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 1585,
+    "Total_Exchange": 1585
+  },
+  {
+    "Metabolite": "Propranolol",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Propranolol Glucuronide",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Protoheme",
+    "Uptake_By_Strains": 3283,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 3283
+  },
+  {
+    "Metabolite": "Putrescine",
+    "Uptake_By_Strains": 2483,
+    "Secreted_By_Strains": 26,
+    "Total_Exchange": 2509
+  },
+  {
+    "Metabolite": "Pyridoxal",
+    "Uptake_By_Strains": 717,
+    "Secreted_By_Strains": 8,
+    "Total_Exchange": 725
+  },
+  {
+    "Metabolite": "Pyridoxal 5-phosphate",
+    "Uptake_By_Strains": 63,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 63
+  },
+  {
+    "Metabolite": "Pyridoxamine",
+    "Uptake_By_Strains": 2,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 2
+  },
+  {
+    "Metabolite": "Pyridoxine",
+    "Uptake_By_Strains": 104,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 105
+  },
+  {
+    "Metabolite": "Pyruvate",
+    "Uptake_By_Strains": 569,
+    "Secreted_By_Strains": 282,
+    "Total_Exchange": 851
+  },
+  {
+    "Metabolite": "R total 2 position",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "R-6-Hydroxywarfarin",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 26,
+    "Total_Exchange": 26
+  },
+  {
+    "Metabolite": "R-6-Hydroxywarfarin Glucuronate",
+    "Uptake_By_Strains": 26,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 26
+  },
+  {
+    "Metabolite": "R-7-Hydroxy Warfarin Glucuronate",
+    "Uptake_By_Strains": 55,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 55
+  },
+  {
+    "Metabolite": "R-7-Hydroxywarfarin",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 55,
+    "Total_Exchange": 55
+  },
+  {
+    "Metabolite": "R-8-Hydroxywarfarin",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 87,
+    "Total_Exchange": 87
+  },
+  {
+    "Metabolite": "R-8-Hydroxywarfarin Glucuronate",
+    "Uptake_By_Strains": 87,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 87
+  },
+  {
+    "Metabolite": "R406",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 341,
+    "Total_Exchange": 341
+  },
+  {
+    "Metabolite": "R788 (Fostamatinib)",
+    "Uptake_By_Strains": 338,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 338
+  },
+  {
+    "Metabolite": "R_R__2_3_Butanediol",
+    "Uptake_By_Strains": 42,
+    "Secreted_By_Strains": 19,
+    "Total_Exchange": 61
+  },
+  {
+    "Metabolite": "Raffinose",
+    "Uptake_By_Strains": 17,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 17
+  },
+  {
+    "Metabolite": "Reduced glutathione",
+    "Uptake_By_Strains": 22,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 23
+  },
+  {
+    "Metabolite": "Reduced riboflavin",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 2,
+    "Total_Exchange": 2
+  },
+  {
+    "Metabolite": "Repaglinide",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Repaglinide Acyl-Beta-D-Glucuronide",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Riboflavin",
+    "Uptake_By_Strains": 2854,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 2854
+  },
+  {
+    "Metabolite": "S-4-Hydroxywarfarin",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 73,
+    "Total_Exchange": 73
+  },
+  {
+    "Metabolite": "S-4-Hydroxywarfarin Glucuronate",
+    "Uptake_By_Strains": 73,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 73
+  },
+  {
+    "Metabolite": "S-6-Hydroxywarfarin",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 215,
+    "Total_Exchange": 215
+  },
+  {
+    "Metabolite": "S-6-Hydroxywarfarin Glucuronate",
+    "Uptake_By_Strains": 215,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 215
+  },
+  {
+    "Metabolite": "S-Adenosyl-L-homocysteine",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 7,
+    "Total_Exchange": 7
+  },
+  {
+    "Metabolite": "S-Adenosyl-L-methionine",
+    "Uptake_By_Strains": 2,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 2
+  },
+  {
+    "Metabolite": "S-carboxy ibuprofen",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "S-carboxy ibuprofen glucuronide",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "SKF 89124 Glucuronide",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "SN-38",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "SN38 glucuronide",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Salicin",
+    "Uptake_By_Strains": 142,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 142
+  },
+  {
+    "Metabolite": "Sb-611855 (Intermediate Of M3)",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 1115,
+    "Total_Exchange": 1115
+  },
+  {
+    "Metabolite": "Serotonin",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Siroheme",
+    "Uptake_By_Strains": 2251,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 2251
+  },
+  {
+    "Metabolite": "Sodium",
+    "Uptake_By_Strains": 1821,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1821
+  },
+  {
+    "Metabolite": "Sorivudine",
+    "Uptake_By_Strains": 56,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 56
+  },
+  {
+    "Metabolite": "Spermidine",
+    "Uptake_By_Strains": 3043,
+    "Secreted_By_Strains": 4,
+    "Total_Exchange": 3047
+  },
+  {
+    "Metabolite": "Stachyose",
+    "Uptake_By_Strains": 140,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 140
+  },
+  {
+    "Metabolite": "Succinate",
+    "Uptake_By_Strains": 626,
+    "Secreted_By_Strains": 1772,
+    "Total_Exchange": 2398
+  },
+  {
+    "Metabolite": "Sucrose",
+    "Uptake_By_Strains": 191,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 191
+  },
+  {
+    "Metabolite": "Sulfanilamide",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 24,
+    "Total_Exchange": 24
+  },
+  {
+    "Metabolite": "Sulfapyridine",
+    "Uptake_By_Strains": 15,
+    "Secreted_By_Strains": 10,
+    "Total_Exchange": 25
+  },
+  {
+    "Metabolite": "Sulfasalazine",
+    "Uptake_By_Strains": 10,
+    "Secreted_By_Strains": 15,
+    "Total_Exchange": 25
+  },
+  {
+    "Metabolite": "Sulfathiazole",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Sulfathiazole Glucuronide",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Sulfite",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 2
+  },
+  {
+    "Metabolite": "T antigen (core 1)",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 2,
+    "Total_Exchange": 2
+  },
+  {
+    "Metabolite": "Taurine",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 575,
+    "Total_Exchange": 575
+  },
+  {
+    "Metabolite": "Taurodeoxycholic acid",
+    "Uptake_By_Strains": 306,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 306
+  },
+  {
+    "Metabolite": "Tempol 1-O-Glucuronide And 4-O-Glucoside",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Tempol 4-O-Glucoside",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Tempol 4-O-Glucuronide",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Tempol Hydroxylamine",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Thiamin",
+    "Uptake_By_Strains": 3089,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 3089
+  },
+  {
+    "Metabolite": "Thiamin monophosphate",
+    "Uptake_By_Strains": 3,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 3
+  },
+  {
+    "Metabolite": "Thymidine",
+    "Uptake_By_Strains": 974,
+    "Secreted_By_Strains": 53,
+    "Total_Exchange": 1027
+  },
+  {
+    "Metabolite": "Tn antigen",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 3,
+    "Total_Exchange": 3
+  },
+  {
+    "Metabolite": "Tolcapone N-Acetyl Amino Glucuronide",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Tolcapone N-Acetyl Amino Metabolite",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Tolfenamic Acid 1B",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 4,
+    "Total_Exchange": 4
+  },
+  {
+    "Metabolite": "Tolfenamic Acid 2A",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 2,
+    "Total_Exchange": 2
+  },
+  {
+    "Metabolite": "Tolfenamic Acid M5B",
+    "Uptake_By_Strains": 4,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 4
+  },
+  {
+    "Metabolite": "Toluene",
+    "Uptake_By_Strains": 34,
+    "Secreted_By_Strains": 5,
+    "Total_Exchange": 39
+  },
+  {
+    "Metabolite": "Trehalose",
+    "Uptake_By_Strains": 262,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 262
+  },
+  {
+    "Metabolite": "Trimethylamine N-oxide",
+    "Uptake_By_Strains": 609,
+    "Secreted_By_Strains": 309,
+    "Total_Exchange": 918
+  },
+  {
+    "Metabolite": "Tryptamine",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Tyr-194 of apo-glycogenin protein (primer for glycogen synthesis)",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Tyramine",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 15,
+    "Total_Exchange": 15
+  },
+  {
+    "Metabolite": "Ubiquinone-8",
+    "Uptake_By_Strains": 808,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 808
+  },
+  {
+    "Metabolite": "Urea",
+    "Uptake_By_Strains": 165,
+    "Secreted_By_Strains": 234,
+    "Total_Exchange": 399
+  },
+  {
+    "Metabolite": "Uridine",
+    "Uptake_By_Strains": 336,
+    "Secreted_By_Strains": 528,
+    "Total_Exchange": 864
+  },
+  {
+    "Metabolite": "Ursodiol",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Valeric Acid",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Water",
+    "Uptake_By_Strains": 1309,
+    "Secreted_By_Strains": 1647,
+    "Total_Exchange": 2956
+  },
+  {
+    "Metabolite": "Xanthine",
+    "Uptake_By_Strains": 248,
+    "Secreted_By_Strains": 13,
+    "Total_Exchange": 261
+  },
+  {
+    "Metabolite": "Xyloglucan",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "Xylooligosaccharide, xylotetraose",
+    "Uptake_By_Strains": 40,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 40
+  },
+  {
+    "Metabolite": "Zinc",
+    "Uptake_By_Strains": 3464,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 3464
+  },
+  {
+    "Metabolite": "acetaminophen/ paracetamol",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "aldehydo-D-xylose",
+    "Uptake_By_Strains": 75,
+    "Secreted_By_Strains": 47,
+    "Total_Exchange": 122
+  },
+  {
+    "Metabolite": "alpha-linolenate",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "amylose (n=300 repeat units, alpha-1,4-glc)",
+    "Uptake_By_Strains": 2,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 2
+  },
+  {
+    "Metabolite": "atorvastatin-acid",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 18,
+    "Total_Exchange": 18
+  },
+  {
+    "Metabolite": "atorvastatin-acyl-glucuronide / G2",
+    "Uptake_By_Strains": 5,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 5
+  },
+  {
+    "Metabolite": "atorvastatin-ether-glucuronide -G1",
+    "Uptake_By_Strains": 18,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 18
+  },
+  {
+    "Metabolite": "atorvastatin-lactone",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 5,
+    "Total_Exchange": 5
+  },
+  {
+    "Metabolite": "benzoate",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 123,
+    "Total_Exchange": 123
+  },
+  {
+    "Metabolite": "butanol",
+    "Uptake_By_Strains": 20,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 20
+  },
+  {
+    "Metabolite": "calcium(2+)",
+    "Uptake_By_Strains": 3464,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 3464
+  },
+  {
+    "Metabolite": "cellobiose",
+    "Uptake_By_Strains": 34,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 34
+  },
+  {
+    "Metabolite": "chenodeoxycholate",
+    "Uptake_By_Strains": 178,
+    "Secreted_By_Strains": 427,
+    "Total_Exchange": 605
+  },
+  {
+    "Metabolite": "cholesterol",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 2,
+    "Total_Exchange": 2
+  },
+  {
+    "Metabolite": "chondroitin sulfate A (GalNAc4S-GlcA) proteoglycan",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "chorismate",
+    "Uptake_By_Strains": 7,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 8
+  },
+  {
+    "Metabolite": "cis-Aconitate",
+    "Uptake_By_Strains": 4,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 4
+  },
+  {
+    "Metabolite": "cytosine",
+    "Uptake_By_Strains": 389,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 390
+  },
+  {
+    "Metabolite": "dTMP",
+    "Uptake_By_Strains": 2,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 3
+  },
+  {
+    "Metabolite": "deoxycholic acid",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 344,
+    "Total_Exchange": 344
+  },
+  {
+    "Metabolite": "disialyl-T antigen",
+    "Uptake_By_Strains": 3,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 3
+  },
+  {
+    "Metabolite": "estriol",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "estrone",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 5,
+    "Total_Exchange": 5
+  },
+  {
+    "Metabolite": "estrone 3-glucosiduronic acid",
+    "Uptake_By_Strains": 5,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 5
+  },
+  {
+    "Metabolite": "ethanesulfonate",
+    "Uptake_By_Strains": 2,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 2
+  },
+  {
+    "Metabolite": "formaldehyde",
+    "Uptake_By_Strains": 4,
+    "Secreted_By_Strains": 272,
+    "Total_Exchange": 276
+  },
+  {
+    "Metabolite": "galactitol",
+    "Uptake_By_Strains": 2,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 2
+  },
+  {
+    "Metabolite": "glucuronide-conjugate of 3-methoxy-acetaminophen",
+    "Uptake_By_Strains": 55,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 55
+  },
+  {
+    "Metabolite": "glycine betaine",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 67,
+    "Total_Exchange": 68
+  },
+  {
+    "Metabolite": "glycochenodeoxycholate",
+    "Uptake_By_Strains": 139,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 140
+  },
+  {
+    "Metabolite": "glycocholate",
+    "Uptake_By_Strains": 93,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 93
+  },
+  {
+    "Metabolite": "glycogen, structure 2 (glycogenin-1,6-{7[1,4-Glc], 4[1,4-Glc]})",
+    "Uptake_By_Strains": 10,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 10
+  },
+  {
+    "Metabolite": "glycogen, structure 4 (glycogenin-1,6-{2[1,4-Glc], [1,4-Glc]})",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 6,
+    "Total_Exchange": 6
+  },
+  {
+    "Metabolite": "glycogen, structure 5 (glycogenin-2[1,4-Glc])",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 3,
+    "Total_Exchange": 3
+  },
+  {
+    "Metabolite": "glycolaldehyde",
+    "Uptake_By_Strains": 3,
+    "Secreted_By_Strains": 601,
+    "Total_Exchange": 604
+  },
+  {
+    "Metabolite": "glycolate",
+    "Uptake_By_Strains": 263,
+    "Secreted_By_Strains": 98,
+    "Total_Exchange": 361
+  },
+  {
+    "Metabolite": "glycolithocholate",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "heparan sulfate proteoglycan",
+    "Uptake_By_Strains": 6,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 6
+  },
+  {
+    "Metabolite": "hyaluronan biosynthesis, precursor 1",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "hyaluronan degradation product 1",
+    "Uptake_By_Strains": 1,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "hydrogenphosphate",
+    "Uptake_By_Strains": 1062,
+    "Secreted_By_Strains": 1844,
+    "Total_Exchange": 2906
+  },
+  {
+    "Metabolite": "indole-3-acetate",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 2,
+    "Total_Exchange": 2
+  },
+  {
+    "Metabolite": "keto-phenylpyruvate",
+    "Uptake_By_Strains": 5,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 6
+  },
+  {
+    "Metabolite": "laminarin (n=30 repeat units, beta -1,3 glc)",
+    "Uptake_By_Strains": 6,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 6
+  },
+  {
+    "Metabolite": "lanosterol",
+    "Uptake_By_Strains": 5,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 5
+  },
+  {
+    "Metabolite": "laurate",
+    "Uptake_By_Strains": 97,
+    "Secreted_By_Strains": 46,
+    "Total_Exchange": 143
+  },
+  {
+    "Metabolite": "lithocholate",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "m-Tyramine",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 1,
+    "Total_Exchange": 1
+  },
+  {
+    "Metabolite": "magnesium",
+    "Uptake_By_Strains": 3464,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 3464
+  },
+  {
+    "Metabolite": "maltotriose",
+    "Uptake_By_Strains": 16,
+    "Secreted_By_Strains": 6,
+    "Total_Exchange": 22
+  },
+  {
+    "Metabolite": "mannotriose (beta-1,4)",
+    "Uptake_By_Strains": 12,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 12
+  },
+  {
+    "Metabolite": "meso-2,6-Diaminoheptanedioate",
+    "Uptake_By_Strains": 852,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 852
+  },
+  {
+    "Metabolite": "methanol",
+    "Uptake_By_Strains": 227,
+    "Secreted_By_Strains": 14,
+    "Total_Exchange": 241
+  },
+  {
+    "Metabolite": "methylammonium",
+    "Uptake_By_Strains": 21,
+    "Secreted_By_Strains": 3,
+    "Total_Exchange": 24
+  },
+  {
+    "Metabolite": "myo-inositol",
+    "Uptake_By_Strains": 2,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 2
+  },
+  {
+    "Metabolite": "n-butylamine",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 2,
+    "Total_Exchange": 2
+  },
+  {
+    "Metabolite": "octadecanoate (n-C18:0)",
+    "Uptake_By_Strains": 1345,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1345
+  },
+  {
+    "Metabolite": "octadecenoate (n-C18:1)",
+    "Uptake_By_Strains": 4,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 4
+  },
+  {
+    "Metabolite": "oxalate(2-)",
+    "Uptake_By_Strains": 2,
+    "Secreted_By_Strains": 580,
+    "Total_Exchange": 582
+  },
+  {
+    "Metabolite": "p-Cresol",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 14,
+    "Total_Exchange": 14
+  },
+  {
+    "Metabolite": "pectins",
+    "Uptake_By_Strains": 11,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 11
+  },
+  {
+    "Metabolite": "phenylacetate",
+    "Uptake_By_Strains": 488,
+    "Secreted_By_Strains": 87,
+    "Total_Exchange": 575
+  },
+  {
+    "Metabolite": "pitavastatin",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 6,
+    "Total_Exchange": 6
+  },
+  {
+    "Metabolite": "pitavastatin-glucuronide",
+    "Uptake_By_Strains": 6,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 6
+  },
+  {
+    "Metabolite": "potassium",
+    "Uptake_By_Strains": 3464,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 3464
+  },
+  {
+    "Metabolite": "protein-linked serine or threonine residue (O-glycosylation site)",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 2,
+    "Total_Exchange": 2
+  },
+  {
+    "Metabolite": "proton",
+    "Uptake_By_Strains": 1641,
+    "Secreted_By_Strains": 1706,
+    "Total_Exchange": 3347
+  },
+  {
+    "Metabolite": "pullulan (n=1200 repeat units, alpha-1,4 and alph-1,6 bounds)",
+    "Uptake_By_Strains": 13,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 13
+  },
+  {
+    "Metabolite": "rosuvastatin",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 13,
+    "Total_Exchange": 13
+  },
+  {
+    "Metabolite": "rosuvastatin-glucuronide",
+    "Uptake_By_Strains": 13,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 13
+  },
+  {
+    "Metabolite": "selenate",
+    "Uptake_By_Strains": 277,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 277
+  },
+  {
+    "Metabolite": "selenite",
+    "Uptake_By_Strains": 0,
+    "Secreted_By_Strains": 277,
+    "Total_Exchange": 277
+  },
+  {
+    "Metabolite": "starch, structure 1 (1,6-{7[1,4-Glc], 4[1,4-Glc]})",
+    "Uptake_By_Strains": 3,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 3
+  },
+  {
+    "Metabolite": "starch, structure 2 (1,6-{2[1,4-Glc], [1,4-Glc]})",
+    "Uptake_By_Strains": 2,
+    "Secreted_By_Strains": 3,
+    "Total_Exchange": 5
+  },
+  {
+    "Metabolite": "sulfate",
+    "Uptake_By_Strains": 3318,
+    "Secreted_By_Strains": 141,
+    "Total_Exchange": 3459
+  },
+  {
+    "Metabolite": "taurochenodeoxycholate",
+    "Uptake_By_Strains": 105,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 105
+  },
+  {
+    "Metabolite": "taurocholate",
+    "Uptake_By_Strains": 175,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 175
+  },
+  {
+    "Metabolite": "tetradecanoate (n-C14:0)",
+    "Uptake_By_Strains": 1166,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 1166
+  },
+  {
+    "Metabolite": "thiosulfate(2-)",
+    "Uptake_By_Strains": 627,
+    "Secreted_By_Strains": 3,
+    "Total_Exchange": 630
+  },
+  {
+    "Metabolite": "trans-4-hydroxy-L-proline",
+    "Uptake_By_Strains": 10,
+    "Secreted_By_Strains": 0,
+    "Total_Exchange": 10
+  },
+  {
+    "Metabolite": "trimethylamine",
+    "Uptake_By_Strains": 307,
+    "Secreted_By_Strains": 620,
+    "Total_Exchange": 927
+  },
+  {
+    "Metabolite": "uracil",
+    "Uptake_By_Strains": 1307,
+    "Secreted_By_Strains": 10,
+    "Total_Exchange": 1317
+  },
+  {
+    "Metabolite": "xanthosine",
+    "Uptake_By_Strains": 211,
+    "Secreted_By_Strains": 318,
+    "Total_Exchange": 529
+  }
+]

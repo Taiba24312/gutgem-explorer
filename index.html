@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <title>GutGEM Explorer v1.0 | Human Gut GEM Exchange Flux Knowledgebase</title>
+  <meta name="description" content="Interactive scientific knowledgebase to explore human gut bacterial genome-scale metabolic models (GEMs) exchange fluxes without programming.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheet (Cache Busted v1.0.2) -->
+  <link rel="stylesheet" href="styles.css?v=1.0.2">
+  
+  <!-- CDN Dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- Header & Global Navigation -->
+  <header class="app-header">
+    <div class="header-top">
+      <div class="brand-container">
+        <!-- Anatomical Gut + Internal Bacteria SVG Emblem Logo -->
+        <div class="brand-logo-gut-emblem" title="GutGEM Explorer - Anatomical Gut Microbiome Engine">
+          <svg width="36" height="36" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 8C12 6 15 4 20 4C26 4 28 8 28 11C28 15 22 16 22 20C22 24 30 24 32 27C34 30 34 36 28 39C22 42 16 40 14 36" 
+                  stroke="#10b981" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16 11C16 9.5 18 8 21 8C25 8 24 11 24 13C24 17 17 18 17 22C17 26 25 27 27 30C29 33 27 36 24 37" 
+                  stroke="#06b6d4" stroke-width="2.2" stroke-linecap="round" opacity="0.6"/>
+            <rect x="18" y="12" width="7" height="3" rx="1.5" fill="#34d399" transform="rotate(-15 18 12)"/>
+            <rect x="23" y="21" width="8" height="3.5" rx="1.75" fill="#38bdf8" transform="rotate(25 23 21)"/>
+            <rect x="22" y="32" width="7" height="3" rx="1.5" fill="#a78bfa" transform="rotate(-10 22 32)"/>
+            <circle cx="15" cy="18" r="1.8" fill="#fbbf24"/>
+            <circle cx="28" cy="16" r="1.8" fill="#f43f5e"/>
+            <circle cx="28" cy="26" r="2.0" fill="#34d399"/>
+            <circle cx="18" cy="28" r="1.6" fill="#38bdf8"/>
+            <circle cx="29" cy="35" r="1.8" fill="#fbbf24"/>
+          </svg>
+        </div>
+        
+        <div class="brand-title-group">
+          <h1>
+            GutGEM Explorer 
+            <span style="font-size:0.75rem; color:var(--primary); font-weight:800; background:var(--primary-bg); padding:0.18rem 0.55rem; border-radius:20px; border:1px solid var(--primary-border);">
+              v1.0 FBA Engine
+            </span>
+          </h1>
+          <p>Human Gut Microbiome GEM Exchange Flux Knowledgebase • 3,464 Models</p>
+        </div>
+      </div>
+      
+      <div class="header-badges">
+        <!-- Live Theme Switcher -->
+        <select id="theme-selector" class="theme-select" title="Change Theme Palette">
+          <option value="dark">🧬 Biomedical Dark</option>
+          <option value="pastel">🔬 Clinical Pastel</option>
+          <option value="emerald">🧫 Microbiome Emerald</option>
+          <option value="cyber">⚡ Cyber Bio-Tech</option>
+        </select>
+
+        <span class="badge badge-primary"><i data-lucide="database"></i> 3,464 GEMs</span>
+        <span class="badge badge-cyan"><i data-lucide="activity"></i> 252,983 Flux Records</span>
+        <button class="btn btn-secondary" style="padding:0.4rem 0.85rem; font-size:0.8rem;" id="btn-open-uploader">
+          <i data-lucide="upload-cloud"></i> Load Custom Data
+        </button>
+      </div>
+    </div>
+    
+    <nav class="nav-tabs">
+      <button class="nav-tab active" data-tab="home-overview"><i data-lucide="home"></i> Home Overview</button>
+      <button class="nav-tab" data-tab="strain-explorer"><i data-lucide="dna"></i> Strain Explorer</button>
+      <button class="nav-tab" data-tab="metabolite-explorer"><i data-lucide="flask-conical"></i> Metabolite Explorer</button>
+      <button class="nav-tab" data-tab="scfa-explorer"><i data-lucide="zap"></i> SCFA Explorer</button>
+      <button class="nav-tab" data-tab="compare-strains"><i data-lucide="git-compare"></i> Compare Strains</button>
+      <button class="nav-tab" data-tab="exchangeome-explorer"><i data-lucide="globe"></i> Exchangeome Explorer</button>
+      <button class="nav-tab" data-tab="heatmap-explorer"><i data-lucide="grid"></i> Heatmap Explorer</button>
+      <button class="nav-tab" data-tab="downloads-hub"><i data-lucide="download"></i> Downloads</button>
+      <button class="nav-tab" data-tab="about-methodology"><i data-lucide="book-open"></i> About & Methodology</button>
+    </nav>
+  </header>
+
+  <!-- Main Container -->
+  <main class="app-container">
+
+    <!-- 1. HOME OVERVIEW -->
+    <section id="home-overview" class="tab-content active">
+      <div class="card" style="border-color: var(--primary-border);">
+        <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.4rem;">
+          <span class="badge badge-primary"><i data-lucide="sparkles"></i> Zero-Programming FBA Knowledgebase</span>
+          <span class="badge badge-cyan"><i data-lucide="microscope"></i> AGORA2 Integration</span>
+        </div>
+        <h2 style="font-size: 1.6rem; font-weight: 800; margin-bottom: 0.6rem; color:var(--text-main); letter-spacing:-0.02em;">
+          Exploring Strain-Level Gut Bacterial Exchange Fluxes Without Programming
+        </h2>
+        <p style="color: var(--text-muted); max-width: 980px; font-size: 0.96rem; line-height: 1.65; font-weight:500;">
+          GutGEM Explorer is an interactive scientific knowledgebase designed to unlock the metabolic exchange capabilities of human gut bacterial species. Driven by Flux Balance Analysis (FBA) outputs derived from AGORA2 models, this platform converts raw exchange fluxes into an intuitive, searchable, and comparative exploration resource for microbiome researchers and computational biologists.
+        </p>
+      </div>
+
+      <!-- Primary Stats Grid -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon" style="color: var(--primary);"><i data-lucide="box"></i></div>
+          <div>
+            <div class="stat-number">3,464</div>
+            <div class="stat-label">Human Gut GEMs</div>
+          </div>
+        </div>
+        
+        <div class="stat-card cyan">
+          <div class="stat-icon" style="color: var(--secondary);"><i data-lucide="bug"></i></div>
+          <div>
+            <div class="stat-number">332</div>
+            <div class="stat-label">Curated Species</div>
+          </div>
+        </div>
+
+        <div class="stat-card purple">
+          <div class="stat-icon" style="color: var(--accent);"><i data-lucide="bar-chart-3"></i></div>
+          <div>
+            <div class="stat-number">252,983</div>
+            <div class="stat-label">Exchange Flux Records</div>
+          </div>
+        </div>
+
+        <div class="stat-card amber">
+          <div class="stat-icon" style="color: var(--warning);"><i data-lucide="layers"></i></div>
+          <div>
+            <div class="stat-number">512</div>
+            <div class="stat-label">Exchange Metabolites</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Workflow Pipeline Diagram -->
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title"><i data-lucide="git-branch" style="color:var(--primary);"></i> Data Processing & Modeling Workflow</h3>
+        </div>
+        <div class="workflow-container">
+          <div class="workflow-step">
+            <div class="workflow-step-num">Step 1</div>
+            <div class="workflow-step-title">466 Species</div>
+            <div class="workflow-step-desc">Gut Bacterial Species Selection</div>
+          </div>
+          <div class="workflow-arrow">➔</div>
+          <div class="workflow-step">
+            <div class="workflow-step-num">Step 2</div>
+            <div class="workflow-step-title">AGORA2 Mapping</div>
+            <div class="workflow-step-desc">332 Matched Gut Species</div>
+          </div>
+          <div class="workflow-arrow">➔</div>
+          <div class="workflow-step">
+            <div class="workflow-step-num">Step 3</div>
+            <div class="workflow-step-title">3,504 Strain GEMs</div>
+            <div class="workflow-step-desc">3,464 Human-Specific GEMs</div>
+          </div>
+          <div class="workflow-arrow">➔</div>
+          <div class="workflow-step">
+            <div class="workflow-step-num">Step 4</div>
+            <div class="workflow-step-title">Flux Balance Analysis</div>
+            <div class="workflow-step-desc">Biomass Optimization</div>
+          </div>
+          <div class="workflow-arrow">➔</div>
+          <div class="workflow-step" style="border-color: var(--primary); background: var(--primary-bg);">
+            <div class="workflow-step-num">Step 5</div>
+            <div class="workflow-step-title" style="color:var(--primary);">GutGEM Explorer</div>
+            <div class="workflow-step-desc">Searchable Knowledgebase</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Novelty Statement -->
+      <div class="card" style="border-left: 5px solid var(--secondary);">
+        <h3 style="font-size: 1.1rem; font-weight: 800; color: var(--text-main); margin-bottom: 0.45rem;">
+          <i data-lucide="sparkles" style="color:var(--secondary); vertical-align:middle;"></i> Scientific Novelty & Value Proposition
+        </h3>
+        <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6; font-weight:500;">
+          While raw AGORA2 metabolic models provide structural reaction networks, extracting and interpreting strain-level FBA outputs requires Python/MATLAB programming skills. <strong>GutGEM Explorer transforms raw FBA exchange outputs into a zero-programming, searchable analytical platform</strong>—allowing researchers to instantly inspect strain metabolic fingerprints, evaluate metabolite cross-feeding potential, compare strain pairs using multi-metric distance functions, and filter core vs variable exchangeomes.
+        </p>
+      </div>
+
+      <!-- Top Uptake & Secretion Overview Charts -->
+      <div class="comparison-grid">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title"><i data-lucide="arrow-down-left" style="color:var(--secondary);"></i> Top 10 Uptake Metabolites</h3>
+          </div>
+          <div style="height: 290px;">
+            <canvas id="chart-top-uptake"></canvas>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title"><i data-lucide="arrow-up-right" style="color:var(--primary);"></i> Top 10 Secreted Metabolites</h3>
+          </div>
+          <div style="height: 290px;">
+            <canvas id="chart-top-secretion"></canvas>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. STRAIN EXPLORER -->
+    <section id="strain-explorer" class="tab-content">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title"><i data-lucide="dna" style="color:var(--primary);"></i> Strain Metabolic Profile Lookup</h3>
+        </div>
+        
+        <div class="select-group">
+          <label style="font-weight: 700; font-size: 0.92rem;">Select Strain:</label>
+          <select id="strain-select" class="custom-select"></select>
+          <input type="text" id="strain-search-filter" class="search-input" placeholder="Filter reactions by name/ID...">
+        </div>
+
+        <!-- Strain Header Meta Box -->
+        <div id="strain-meta-box" class="stats-grid" style="margin-top: 1rem;">
+          <!-- Dynamically filled -->
+        </div>
+      </div>
+
+      <!-- Strain Dual Tables -->
+      <div class="comparison-grid">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title"><i data-lucide="arrow-down-left" style="color:var(--secondary);"></i> Uptake Reactions (<span id="count-uptake">0</span>)</h3>
+          </div>
+          <div class="table-container">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Exchange ID</th>
+                  <th>Metabolite Name</th>
+                  <th>Flux (mmol/gDW/h)</th>
+                </tr>
+              </thead>
+              <tbody id="tbl-strain-uptake">
+                <tr><td colspan="3" style="text-align:center; color:var(--text-dim);">Select a strain to view uptake reactions</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title"><i data-lucide="arrow-up-right" style="color:var(--primary);"></i> Secretion Reactions (<span id="count-secretion">0</span>)</h3>
+          </div>
+          <div class="table-container">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Exchange ID</th>
+                  <th>Metabolite Name</th>
+                  <th>Flux (mmol/gDW/h)</th>
+                </tr>
+              </thead>
+              <tbody id="tbl-strain-secretion">
+                <tr><td colspan="3" style="text-align:center; color:var(--text-dim);">Select a strain to view secretion reactions</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. METABOLITE EXPLORER -->
+    <section id="metabolite-explorer" class="tab-content">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title"><i data-lucide="flask-conical" style="color:var(--secondary);"></i> Metabolite-Centric Exchange Lookup</h3>
+        </div>
+        
+        <div class="select-group">
+          <label style="font-weight: 700; font-size: 0.92rem;">Select Metabolite:</label>
+          <select id="metabolite-select" class="custom-select"></select>
+          <input type="text" id="metab-strain-search" class="search-input" placeholder="Filter strains...">
+        </div>
+
+        <div id="metab-meta-box" class="stats-grid" style="margin-top: 1rem;">
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+
+      <!-- Metabolite Dual Strains Grid -->
+      <div class="comparison-grid">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title"><i data-lucide="arrow-down-left" style="color:var(--secondary);"></i> Strains Uptaking This Metabolite (<span id="count-metab-uptake">0</span>)</h3>
+          </div>
+          <div class="table-container">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Strain Name</th>
+                  <th>Flux (mmol/gDW/h)</th>
+                </tr>
+              </thead>
+              <tbody id="tbl-metab-uptake">
+                <tr><td colspan="2" style="text-align:center; color:var(--text-dim);">Select a metabolite</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title"><i data-lucide="arrow-up-right" style="color:var(--primary);"></i> Strains Secreting This Metabolite (<span id="count-metab-secretion">0</span>)</h3>
+          </div>
+          <div class="table-container">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Strain Name</th>
+                  <th>Flux (mmol/gDW/h)</th>
+                </tr>
+              </thead>
+              <tbody id="tbl-metab-secretion">
+                <tr><td colspan="2" style="text-align:center; color:var(--text-dim);">Select a metabolite</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. SCFA EXPLORER -->
+    <section id="scfa-explorer" class="tab-content">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title"><i data-lucide="zap" style="color:var(--warning);"></i> Short-Chain Fatty Acids (SCFA) Functional Explorer</h3>
+        </div>
+        <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:1rem; font-weight:500;">
+          SCFAs (Acetate, Propionate, Butyrate, Valerate, Formate, Isobutyrate, Isovalerate) are key functional mediators of gut microbial-host homeostasis. Explore producer and consumer strain profiles below.
+        </p>
+        
+        <div class="select-group">
+          <label style="font-weight: 700; font-size: 0.92rem;">Select SCFA:</label>
+          <select id="scfa-select" class="custom-select"></select>
+        </div>
+
+        <div id="scfa-summary-cards" class="stats-grid">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title"><i data-lucide="users" style="color:var(--primary);"></i> SCFA Exchanging Strains Breakdown</h3>
+          <div class="toggle-group">
+            <span>Filter:</span>
+            <select id="scfa-filter-dir" class="custom-select" style="min-width:140px; padding:0.4rem 0.8rem;">
+              <option value="all">All Exchanging Strains</option>
+              <option value="producers">Producers (Secretion)</option>
+              <option value="consumers">Consumers (Uptake)</option>
+            </select>
+          </div>
+        </div>
+        <div class="table-container">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Strain Name</th>
+                <th>Exchange Role</th>
+                <th>Flux (mmol/gDW/h)</th>
+              </tr>
+            </thead>
+            <tbody id="tbl-scfa-strains">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. COMPARE STRAINS & MULTI-STRAIN GROUPS -->
+    <section id="compare-strains" class="tab-content">
+      <div class="card">
+        <div class="card-header" style="flex-wrap:wrap; gap:1rem;">
+          <h3 class="card-title"><i data-lucide="git-compare" style="color:var(--accent);"></i> Multi-Strain & Distance Metric Comparison Engine</h3>
+          
+          <!-- Mode Switcher -->
+          <div style="display:flex; gap:0.5rem; background:var(--bg-card); padding:0.25rem; border-radius:var(--radius-md); border:1px solid var(--border-subtle);">
+            <button class="btn btn-secondary compare-mode-btn active" id="btn-mode-pair" style="padding:0.35rem 0.8rem; font-size:0.8rem;">
+              <i data-lucide="user"></i> 1-vs-1 Pairwise
+            </button>
+            <button class="btn btn-secondary compare-mode-btn" id="btn-mode-group" style="padding:0.35rem 0.8rem; font-size:0.8rem;">
+              <i data-lucide="users"></i> Group A vs Group B (5-6 Strains)
+            </button>
+          </div>
+        </div>
+
+        <!-- Common Select Distance Metric Bar -->
+        <div style="background:var(--bg-card); padding:1rem; border-radius:var(--radius-md); margin-bottom:1.2rem; border:1px solid var(--primary-border);">
+          <label style="font-weight:800; font-size:0.92rem; color:var(--primary); display:block; margin-bottom:0.4rem;">
+            <i data-lucide="sliders" style="vertical-align:middle;"></i> Choose Distance Metric to Calculate:
+          </label>
+          <select id="compare-metric-select" class="custom-select" style="width:100%; font-weight:700; font-size:0.95rem; padding:0.6rem 1rem; border-color:var(--primary);">
+            <optgroup label="Continuous Flux Matrix Metrics (Flux Magnitudes)">
+              <option value="braycurtis" selected>1. Bray-Curtis Dissimilarity (Flux Ratio Shift)</option>
+              <option value="manhattan">2. Manhattan Distance (L1 Absolute Flux Shift)</option>
+              <option value="euclidean">3. Euclidean Distance (L2 Geometric Flux Distance)</option>
+              <option value="canberra">4. Canberra Distance (Trace Flux Relative Difference)</option>
+              <option value="cosine">5. Cosine Distance (Flux Angle Direction Difference)</option>
+              <option value="chebyshev">6. Chebyshev Distance (L-Infinity Max Single Flux Shift)</option>
+              <option value="pearson">7. Pearson Correlation Distance (1 - r)</option>
+              <option value="spearman">8. Spearman Rank Distance (1 - rho)</option>
+            </optgroup>
+            <optgroup label="Binary Matrix Metrics (Presence/Absence Overlap)">
+              <option value="jaccard_similarity">9. Jaccard Similarity Index (Overlapping Ratio)</option>
+              <option value="dice">10. Sørensen-Dice Similarity Coefficient</option>
+              <option value="hamming">11. Hamming Distance (Mismatched Gene/Reaction Count)</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <!-- 1-VS-1 PAIRWISE CONTAINER -->
+        <div id="container-compare-pair">
+          <div class="select-group">
+            <div style="flex:1;">
+              <label style="font-weight:700; font-size:0.88rem; display:block; margin-bottom:0.3rem;">Strain A:</label>
+              <select id="compare-strain-a" class="custom-select" style="width:100%;"></select>
+            </div>
+            <div style="font-weight:800; color:var(--text-dim); margin-top:1.2rem;">VS</div>
+            <div style="flex:1;">
+              <label style="font-weight:700; font-size:0.88rem; display:block; margin-bottom:0.3rem;">Strain B:</label>
+              <select id="compare-strain-b" class="custom-select" style="width:100%;"></select>
+            </div>
+            <button class="btn" id="btn-compare-strains" style="margin-top:1.2rem;">
+              <i data-lucide="calculator"></i> Calculate Selected Distance
+            </button>
+          </div>
+
+          <!-- Selected Answer Display Card -->
+          <div style="background:var(--primary-bg); border:2px solid var(--primary); border-radius:var(--radius-lg); padding:1.5rem; text-align:center; margin-bottom:1.5rem;">
+            <div style="font-size:0.85rem; font-weight:800; color:var(--primary); text-transform:uppercase; letter-spacing:1px; margin-bottom:0.3rem;" id="pair-metric-label">
+              BRAY-CURTIS DISSIMILARITY ANSWER
+            </div>
+            <div style="font-size:3rem; font-weight:900; color:var(--primary); font-family:var(--font-mono);" id="pair-metric-answer">
+              0.0000
+            </div>
+            <div style="font-size:0.85rem; color:var(--text-muted); font-weight:600; margin-top:0.3rem;" id="pair-metric-desc">
+              Exact calculated distance value between Strain A and Strain B
+            </div>
+          </div>
+
+          <div class="stats-grid" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));">
+            <div class="similarity-score-box">
+              <div class="score-value" id="jaccard-uptake">0.00</div>
+              <div class="score-label">Uptake Jaccard Index</div>
+            </div>
+            <div class="similarity-score-box">
+              <div class="score-value" id="jaccard-secretion">0.00</div>
+              <div class="score-label">Secretion Jaccard Index</div>
+            </div>
+            <div class="similarity-score-box">
+              <div class="score-value" id="jaccard-combined">0.00</div>
+              <div class="score-label">Combined Jaccard Index</div>
+            </div>
+            <div class="similarity-score-box" style="background:var(--secondary-bg); border-color:var(--secondary-border);">
+              <div class="score-value" id="dist-braycurtis" style="color:var(--secondary);">0.00</div>
+              <div class="score-label">Bray-Curtis Dissimilarity</div>
+            </div>
+            <div class="similarity-score-box" style="background:var(--accent-bg); border-color:rgba(168,85,247,0.35);">
+              <div class="score-value" id="dist-manhattan" style="color:var(--accent);">0.00</div>
+              <div class="score-label">Manhattan Distance (L1)</div>
+            </div>
+            <div class="similarity-score-box" style="background:var(--warning-bg); border-color:rgba(245,158,11,0.35);">
+              <div class="score-value" id="dist-euclidean" style="color:var(--warning);">0.00</div>
+              <div class="score-label">Euclidean Distance (L2)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MULTI-STRAIN GROUP COMPARISON CONTAINER -->
+        <div id="container-compare-group" style="display:none;">
+          <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:1rem; font-weight:500;">
+            Select 5-6 strains for <strong>Group A</strong> and 5-6 strains for <strong>Group B</strong> to compute inter-group pairwise distances and summary statistics.
+          </p>
+
+          <div class="comparison-grid" style="margin-bottom:1.2rem;">
+            <!-- Group A Selection Box -->
+            <div class="card" style="margin:0; border-color:var(--secondary-border);">
+              <h4 style="color:var(--secondary); font-size:0.98rem; font-weight:800; margin-bottom:0.5rem; display:flex; align-items:center; justify-content:space-between;">
+                <span><i data-lucide="users"></i> Group A Strains (Select 5-6)</span>
+                <span class="badge badge-cyan" id="count-group-a">0 Selected</span>
+              </h4>
+              <div id="list-group-a" style="max-height:220px; overflow-y:auto; border:1px solid var(--border-subtle); border-radius:var(--radius-sm); padding:0.5rem; background:var(--bg-card);">
+                <!-- Populated dynamically with checkboxes -->
+              </div>
+            </div>
+
+            <!-- Group B Selection Box -->
+            <div class="card" style="margin:0; border-color:var(--primary-border);">
+              <h4 style="color:var(--primary); font-size:0.98rem; font-weight:800; margin-bottom:0.5rem; display:flex; align-items:center; justify-content:space-between;">
+                <span><i data-lucide="users"></i> Group B Strains (Select 5-6)</span>
+                <span class="badge badge-primary" id="count-group-b">0 Selected</span>
+              </h4>
+              <div id="list-group-b" style="max-height:220px; overflow-y:auto; border:1px solid var(--border-subtle); border-radius:var(--radius-sm); padding:0.5rem; background:var(--bg-card);">
+                <!-- Populated dynamically with checkboxes -->
+              </div>
+            </div>
+          </div>
+
+          <button class="btn" id="btn-calc-group" style="width:100%; padding:0.75rem; font-size:1rem; font-weight:800; margin-bottom:1.5rem;">
+            <i data-lucide="calculator"></i> Calculate Group A vs Group B Distance Matrix
+          </button>
+
+          <!-- Group Summary Answer Cards -->
+          <div class="stats-grid" id="group-summary-cards" style="display:none; margin-bottom:1.5rem;">
+            <div class="stat-card">
+              <div class="stat-icon" style="color:var(--primary);"><i data-lucide="bar-chart-2"></i></div>
+              <div>
+                <div class="stat-number" id="group-mean-dist">0.0000</div>
+                <div class="stat-label">Mean Inter-Group Distance</div>
+              </div>
+            </div>
+            <div class="stat-card cyan">
+              <div class="stat-icon" style="color:var(--secondary);"><i data-lucide="trending-down"></i></div>
+              <div>
+                <div class="stat-number" id="group-min-dist">0.0000</div>
+                <div class="stat-label">Minimum Pair Distance</div>
+              </div>
+            </div>
+            <div class="stat-card purple">
+              <div class="stat-icon" style="color:var(--accent);"><i data-lucide="trending-up"></i></div>
+              <div>
+                <div class="stat-number" id="group-max-dist">0.0000</div>
+                <div class="stat-label">Maximum Pair Distance</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Inter-Group Distance Matrix Table -->
+          <div id="group-matrix-container" style="display:none;" class="card">
+            <h4 style="font-size:1rem; font-weight:800; color:var(--text-main); margin-bottom:0.75rem;">
+              <i data-lucide="grid" style="color:var(--primary);"></i> Inter-Group Distance Matrix (Group A rows x Group B cols)
+            </h4>
+            <div class="table-container">
+              <table class="data-table" id="tbl-group-matrix">
+                <!-- Dynamically populated matrix table -->
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Categorized Venn Comparison Lists -->
+      <div class="comparison-grid">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title"><i data-lucide="layers" style="color:var(--secondary);"></i> Shared Common Uptake</h3>
+          </div>
+          <div class="table-container">
+            <table class="data-table">
+              <thead><tr><th>Metabolite Name</th></tr></thead>
+              <tbody id="tbl-common-uptake"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title"><i data-lucide="layers" style="color:var(--primary);"></i> Shared Common Secretion</h3>
+          </div>
+          <div class="table-container">
+            <table class="data-table">
+              <thead><tr><th>Metabolite Name</th></tr></thead>
+              <tbody id="tbl-common-secretion"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. EXCHANGEOME EXPLORER -->
+    <section id="exchangeome-explorer" class="tab-content">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title"><i data-lucide="globe" style="color:var(--secondary);"></i> Global Exchangeome Frequency & Core/Variable Analysis</h3>
+          <div class="toggle-group">
+            <label class="toggle-switch">
+              <input type="checkbox" id="chk-exclude-ions" checked>
+              <span class="slider"></span>
+            </label>
+            <span style="font-weight:700; color:var(--text-main);">Exclude Universal Inorganic Ions (Mg²⁺, K⁺, Ca²⁺, Na⁺, Cl⁻, H₂O, H⁺, Pi)</span>
+          </div>
+        </div>
+        
+        <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:1rem; font-weight:500;">
+          Metabolites are ranked by exchange prevalence across 3,464 gut GEMs. Core exchangeome includes high-prevalence metabolites (>50% strains), while variable exchangeome highlights strain-specific metabolic capabilities.
+        </p>
+
+        <div class="table-container" style="max-height: 520px;">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Rank</th>
+                <th>Metabolite Name</th>
+                <th>Uptaking Strains</th>
+                <th>Secreting Strains</th>
+                <th>Total Exchanging Strains</th>
+                <th>Prevalence (%)</th>
+                <th>Classification</th>
+              </tr>
+            </thead>
+            <tbody id="tbl-exchangeome">
+              <!-- Populated dynamically -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. HEATMAP EXPLORER & COLOR LEGEND -->
+    <section id="heatmap-explorer" class="tab-content">
+      <div class="card">
+        <div class="card-header" style="flex-wrap:wrap; gap:1rem;">
+          <h3 class="card-title"><i data-lucide="grid" style="color:var(--primary);"></i> Custom Strain & Metabolite Heatmap Explorer</h3>
+          
+          <div class="toggle-group">
+            <span>Matrix Data:</span>
+            <select id="heatmap-matrix-type" class="custom-select" style="min-width:150px; padding:0.4rem 0.8rem;">
+              <option value="binary_matrix">Binary Exchange Matrix (+1 Secreted, -1 Uptaken, 0 Inactive)</option>
+              <option value="uptake_matrix">Continuous Uptake Flux Matrix</option>
+              <option value="secretion_matrix">Continuous Secretion Flux Matrix</option>
+              <option value="flux_matrix">Net Exchange Flux Matrix</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- VISUAL COLOR LEGEND & KEY BAR -->
+        <div style="background:var(--bg-card); border:2px solid var(--primary-border); border-radius:var(--radius-md); padding:1rem; margin-bottom:1.2rem;">
+          <h4 style="font-size:0.92rem; font-weight:800; color:var(--text-main); margin-bottom:0.6rem; display:flex; align-items:center; gap:0.4rem;">
+            <i data-lucide="palette" style="color:var(--primary);"></i> Heatmap Color Legend & Key Specification:
+          </h4>
+          <div style="display:flex; flex-wrap:wrap; gap:1.2rem; align-items:center;">
+            <div style="display:flex; align-items:center; gap:0.5rem; background:rgba(16,185,129,0.12); padding:0.4rem 0.8rem; border-radius:var(--radius-sm); border:1px solid rgba(16,185,129,0.4);">
+              <div style="width:18px; height:18px; background:#10b981; border-radius:3px; border:1px solid #ffffff;"></div>
+              <span style="font-size:0.85rem; font-weight:700; color:#10b981;">EMERALD GREEN = Secreted Metabolite / Production (+ Flux)</span>
+            </div>
+
+            <div style="display:flex; align-items:center; gap:0.5rem; background:rgba(6,182,212,0.12); padding:0.4rem 0.8rem; border-radius:var(--radius-sm); border:1px solid rgba(6,182,212,0.4);">
+              <div style="width:18px; height:18px; background:#06b6d4; border-radius:3px; border:1px solid #ffffff;"></div>
+              <span style="font-size:0.85rem; font-weight:700; color:#06b6d4;">CYAN BLUE = Uptaken Metabolite / Consumption (- Flux)</span>
+            </div>
+
+            <div style="display:flex; align-items:center; gap:0.5rem; background:rgba(255,255,255,0.05); padding:0.4rem 0.8rem; border-radius:var(--radius-sm); border:1px solid var(--border-subtle);">
+              <div style="width:18px; height:18px; background:#1e293b; border-radius:3px; border:1px solid #475569;"></div>
+              <span style="font-size:0.85rem; font-weight:700; color:var(--text-muted);">DARK SLATE = Inactive / No Exchange (0 Flux)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Custom Selection Panel for Bacteria & Metabolites -->
+        <div class="comparison-grid" style="margin-bottom:1.2rem;">
+          <!-- Bacteria/Strain Selector -->
+          <div class="card" style="margin:0; border-color:var(--primary-border);">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+              <h4 style="color:var(--primary); font-size:0.95rem; font-weight:800;">
+                <i data-lucide="dna"></i> Select Bacteria / Strains
+              </h4>
+              <div style="display:flex; gap:0.4rem;">
+                <button class="btn btn-secondary" id="btn-heatmap-select-strains-10" style="padding:0.2rem 0.5rem; font-size:0.75rem;">Top 10</button>
+                <button class="btn btn-secondary" id="btn-heatmap-clear-strains" style="padding:0.2rem 0.5rem; font-size:0.75rem;">Clear</button>
+              </div>
+            </div>
+            <input type="text" id="heatmap-strain-search" class="search-input" placeholder="Search bacteria strain name..." style="margin-bottom:0.5rem; font-size:0.82rem; padding:0.4rem 0.7rem;">
+            <div id="heatmap-list-strains" style="max-height:180px; overflow-y:auto; border:1px solid var(--border-subtle); border-radius:var(--radius-sm); padding:0.5rem; background:var(--bg-card);">
+              <!-- Populated dynamically with checkboxes -->
+            </div>
+          </div>
+
+          <!-- Metabolite Selector -->
+          <div class="card" style="margin:0; border-color:var(--secondary-border);">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+              <h4 style="color:var(--secondary); font-size:0.95rem; font-weight:800;">
+                <i data-lucide="flask-conical"></i> Select Metabolites
+              </h4>
+              <div style="display:flex; gap:0.4rem;">
+                <button class="btn btn-secondary" id="btn-heatmap-select-scfa" style="padding:0.2rem 0.5rem; font-size:0.75rem;">7 SCFAs</button>
+                <button class="btn btn-secondary" id="btn-heatmap-select-mets-15" style="padding:0.2rem 0.5rem; font-size:0.75rem;">Top 15</button>
+                <button class="btn btn-secondary" id="btn-heatmap-clear-mets" style="padding:0.2rem 0.5rem; font-size:0.75rem;">Clear</button>
+              </div>
+            </div>
+            <input type="text" id="heatmap-metab-search" class="search-input" placeholder="Search metabolite name..." style="margin-bottom:0.5rem; font-size:0.82rem; padding:0.4rem 0.7rem;">
+            <div id="heatmap-list-mets" style="max-height:180px; overflow-y:auto; border:1px solid var(--border-subtle); border-radius:var(--radius-sm); padding:0.5rem; background:var(--bg-card);">
+              <!-- Populated dynamically with checkboxes -->
+            </div>
+          </div>
+        </div>
+
+        <button class="btn" id="btn-render-custom-heatmap" style="width:100%; padding:0.75rem; font-size:1rem; font-weight:800; margin-bottom:1.5rem;">
+          <i data-lucide="play"></i> Render Custom Heatmap for Selected Bacteria & Metabolites
+        </button>
+
+        <!-- Hover Cell Information Bar -->
+        <div id="heatmap-cell-info" style="background:var(--bg-card); border:2px solid var(--primary); padding:0.85rem 1.2rem; border-radius:var(--radius-md); margin-bottom:1rem; font-size:0.92rem; font-weight:700; color:var(--text-main); text-align:center;">
+          💡 Hover over heatmap cells to inspect strain exchange fluxes.
+        </div>
+
+        <div class="heatmap-container" style="background:#0f172a; padding:1.5rem; border-radius:var(--radius-md); border:1px solid var(--border-subtle);">
+          <canvas id="heatmap-canvas" width="1150" height="650"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. DOWNLOADS HUB -->
+    <section id="downloads-hub" class="tab-content">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title"><i data-lucide="download" style="color:var(--primary);"></i> Processed Research Datasets & Downloads</h3>
+        </div>
+        <p style="color:var(--text-muted); font-size:0.92rem; margin-bottom:1.35rem; font-weight:500;">
+          Download full processed CSV datasets directly generated from FBA models for downstream analysis in R, Python, or MATLAB.
+        </p>
+
+        <div class="stats-grid">
+          <div class="card" style="margin:0;">
+            <h4 style="color:var(--text-main); font-size:1rem; font-weight:800; margin-bottom:0.4rem;">Master Exchange Fluxes</h4>
+            <p style="font-size:0.8rem; color:var(--text-muted); margin-bottom:0.85rem; font-weight:500;">Full 252,983 exchange flux records CSV (30.5 MB)</p>
+            <a href="./data/exchange_fluxes_master.csv" download class="btn" style="font-size:0.8rem;"><i data-lucide="file-text"></i> Download Master CSV</a>
+          </div>
+
+          <div class="card" style="margin:0;">
+            <h4 style="color:var(--text-main); font-size:1rem; font-weight:800; margin-bottom:0.4rem;">Strain Statistics</h4>
+            <p style="font-size:0.8rem; color:var(--text-muted); margin-bottom:0.85rem; font-weight:500;">3,464 GEM strain uptake/secretion summary (156 KB)</p>
+            <a href="./data/strain_statistics.csv" download class="btn btn-secondary" style="font-size:0.8rem;"><i data-lucide="file-spreadsheet"></i> Download CSV</a>
+          </div>
+
+          <div class="card" style="margin:0;">
+            <h4 style="color:var(--text-main); font-size:1rem; font-weight:800; margin-bottom:0.4rem;">Metabolite Statistics</h4>
+            <p style="font-size:0.8rem; color:var(--text-muted); margin-bottom:0.85rem; font-weight:500;">512 metabolite uptake/secretion counts (15.8 KB)</p>
+            <a href="./data/metabolite_statistics.csv" download class="btn btn-secondary" style="font-size:0.8rem;"><i data-lucide="file-spreadsheet"></i> Download CSV</a>
+          </div>
+
+          <div class="card" style="margin:0;">
+            <h4 style="color:var(--text-main); font-size:1rem; font-weight:800; margin-bottom:0.4rem;">SCFA Summary Matrix</h4>
+            <p style="font-size:0.8rem; color:var(--text-muted); margin-bottom:0.85rem; font-weight:500;">SCFA producers, consumers, min/max fluxes (205 KB)</p>
+            <a href="./data/scfa_matrix.csv" download class="btn btn-secondary" style="font-size:0.8rem;"><i data-lucide="file-spreadsheet"></i> Download CSV</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. ABOUT & METHODOLOGY -->
+    <section id="about-methodology" class="tab-content">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title"><i data-lucide="book-open" style="color:var(--primary);"></i> Scientific Background & Methodology</h3>
+        </div>
+
+        <div style="font-size:0.94rem; color:var(--text-muted); line-height:1.75; font-weight:500;">
+          <h4 style="color:var(--text-main); font-size:1.05rem; font-weight:800; margin:1rem 0 0.4rem 0;">1. Source Database & Mapping</h4>
+          <p>
+            GutGEM Explorer relies on genome-scale metabolic models (GEMs) from the <strong>AGORA2 resource</strong>. A total of 466 representative human gut bacterial species were curated, yielding 3,504 strain-specific models, of which 3,464 represent verified human gut strains across 332 species.
+          </p>
+
+          <h4 style="color:var(--text-main); font-size:1.05rem; font-weight:800; margin:1.2rem 0 0.4rem 0;">2. Flux Balance Analysis (FBA) Setup</h4>
+          <p>
+            Flux Balance Analysis was performed under steady-state mass balance constraints:
+            <br>
+            <code style="color:var(--primary); font-family:var(--font-mono); font-weight:700;">S · v = 0 &nbsp;&nbsp;&nbsp; subject to &nbsp;&nbsp;&nbsp; LB_i ≤ v_i ≤ UB_i</code>
+            <br>
+            The objective function maximized biomass production (<code style="color:var(--secondary); font-weight:700;">biomass_c</code>). Flux exchange conventions follow standard COBRA standards:
+            <strong>Negative flux (v &lt; 0)</strong> indicates metabolite uptake/consumption, while <strong>Positive flux (v &gt; 0)</strong> indicates metabolite secretion/production.
+          </p>
+
+          <h4 style="color:var(--text-main); font-size:1.05rem; font-weight:800; margin:1.2rem 0 0.4rem 0;">3. Simulation Environment & Assumptions</h4>
+          <p>
+            Simulations were executed under an <strong>unlimited nutrient environment assumption</strong> (-1000 mmol/gDW/h lower bound for exchange reactions) to capture maximum intrinsic metabolic capability of individual strains.
+          </p>
+
+          <div style="background:var(--danger-bg); border:1px solid rgba(244, 63, 94, 0.35); border-radius:var(--radius-md); padding:1.2rem; margin-top:1.5rem;">
+            <h4 style="color:var(--danger); font-size:1rem; font-weight:800; margin-bottom:0.4rem; display:flex; align-items:center; gap:0.4rem;">
+              <i data-lucide="alert-triangle"></i> Transparent Scientific Limitations
+            </h4>
+            <ul style="padding-left:1.2rem; font-size:0.9rem; color:var(--text-main);">
+              <li><strong>Capability vs Activity:</strong> Binary matrices and FBA bounds represent theoretical metabolic potential under unconstrained medium, not dynamic <em>in vivo</em> activity.</li>
+              <li><strong>Nutrient Environment:</strong> Unlimited nutrient simulation does not account for dietary nutrient competition or gut passage kinetics.</li>
+              <li><strong>Species vs Community Level:</strong> Outputs are strain-specific GEM predictions and do not directly simulate multi-species dynamic differential equations or spatial gut microbial community interactions.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Custom Data Loader Modal -->
+  <div id="modal-uploader" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.7); backdrop-filter:blur(6px); z-index:200; align-items:center; justify-content:center;">
+    <div class="card" style="width:90%; max-width:550px; background:var(--bg-card-solid); position:relative;">
+      <button id="btn-close-modal" style="position:absolute; top:1rem; right:1rem; background:none; border:none; color:var(--text-muted); cursor:pointer; font-size:1.2rem;">✕</button>
+      <h3 class="card-title" style="margin-bottom:0.75rem;"><i data-lucide="upload-cloud" style="color:var(--primary);"></i> Upload Custom Data File</h3>
+      <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:1rem;">Drop your custom CSV, JSON, or Excel (.xlsx / .xls) exchange flux file to explore your FBA dataset.</p>
+      
+      <div id="dropzone" style="border:2px dashed var(--border-subtle); background:var(--bg-card); border-radius:var(--radius-md); padding:2rem; text-align:center; cursor:pointer; transition:all 0.2s;">
+        <i data-lucide="file-up" style="font-size:2rem; color:var(--primary); margin-bottom:0.5rem;"></i>
+        <p style="font-size:0.9rem; color:var(--text-main); font-weight:700;">Click to select or drag CSV / JSON / Excel file here</p>
+        <span style="font-size:0.75rem; color:var(--text-dim);">Accepts .csv, .json, .xlsx, or .xls files</span>
+        <input type="file" id="file-input" accept=".csv,.json,.xlsx,.xls" style="display:none;">
+      </div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript Application (Cache Busted v1.0.2) -->
+  <script src="app.js?v=1.0.2"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: gutgem-explorer
+    env: python
+    buildCommand: pip install -r requirements.txt && python backend/database/init_db.py
+    startCommand: uvicorn backend.app:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: PYTHONPATH
+        value: .

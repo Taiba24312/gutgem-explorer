@@ -1,0 +1,30 @@
+
+GutGEM Explorer
+
+Exchange Reaction Merge Report
+
+--------------------------------------------
+
+Files Found          : 3464
+
+Files Failed         : 0
+
+Rows                 : 252,983
+
+Columns              : 10
+
+Unique Strains       : 3464
+
+Unique Metabolites   : 512
+
+CSV Output
+
+E:\GutGEM_explorer\data\processed\exchange_fluxes_master.csv
+
+Parquet Output
+
+E:\GutGEM_explorer\data\processed\exchange_fluxes_master.parquet
+
+Execution Time
+
+147.21 seconds

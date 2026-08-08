@@ -1,0 +1,697 @@
+/* GutGEM Explorer v1.0 - Multi-Theme & Anatomical Gut Logo Styles */
+
+/* 1. DEFAULT: Biomedical Dark Theme (Midnight Navy + Neon Teal/Emerald) */
+:root, [data-theme="dark"] {
+  --bg-body: #080c14;
+  --bg-card: rgba(15, 23, 42, 0.85);
+  --bg-card-solid: #0f172a;
+  --bg-header: rgba(15, 23, 42, 0.92);
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --text-dim: #64748b;
+  
+  --primary: #10b981; /* Neon Emerald */
+  --primary-bg: rgba(16, 185, 129, 0.12);
+  --primary-border: rgba(16, 185, 129, 0.35);
+  
+  --secondary: #06b6d4; /* Electric Cyan */
+  --secondary-bg: rgba(6, 182, 212, 0.12);
+  --secondary-border: rgba(6, 182, 212, 0.35);
+  
+  --accent: #a855f7; /* Electric Purple */
+  --accent-bg: rgba(168, 85, 247, 0.12);
+  
+  --warning: #f59e0b; /* Amber */
+  --warning-bg: rgba(245, 158, 11, 0.12);
+  
+  --danger: #f43f5e;
+  --danger-bg: rgba(244, 63, 94, 0.12);
+  
+  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.4);
+  --tbl-header-bg: #0f172a;
+  --tbl-hover: rgba(255, 255, 255, 0.03);
+  --flux-uptake-bg: rgba(56, 189, 248, 0.15);
+  --flux-uptake-color: #38bdf8;
+  --flux-sec-bg: rgba(52, 211, 153, 0.15);
+  --flux-sec-color: #34d399;
+}
+
+/* 2. CLINICAL PASTEL THEME (Soft Lavender + Sky Blue) */
+[data-theme="pastel"] {
+  --bg-body: #f4f6fc;
+  --bg-card: #ffffff;
+  --bg-card-solid: #ffffff;
+  --bg-header: rgba(255, 255, 255, 0.95);
+  --border-subtle: #e2e8f0;
+  
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --text-dim: #64748b;
+  
+  --primary: #059669;
+  --primary-bg: #ecfdf5;
+  --primary-border: rgba(16, 185, 129, 0.3);
+  
+  --secondary: #0284c7;
+  --secondary-bg: #f0f9ff;
+  --secondary-border: rgba(2, 132, 199, 0.3);
+  
+  --accent: #7c3aed;
+  --accent-bg: #f3e8ff;
+  
+  --warning: #d97706;
+  --warning-bg: #fffbeb;
+  
+  --danger: #e11d48;
+  --danger-bg: #ffe4e6;
+  
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.05);
+  --tbl-header-bg: #f8fafc;
+  --tbl-hover: #f1f5f9;
+  --flux-uptake-bg: #e0f2fe;
+  --flux-uptake-color: #0284c7;
+  --flux-sec-bg: #d1fae5;
+  --flux-sec-color: #047857;
+}
+
+/* 3. MICROBIOME EMERALD (Deep Forest Slate + Bright Mint) */
+[data-theme="emerald"] {
+  --bg-body: #061512;
+  --bg-card: rgba(11, 31, 26, 0.85);
+  --bg-card-solid: #0d2822;
+  --bg-header: rgba(11, 31, 26, 0.92);
+  --border-subtle: rgba(16, 185, 129, 0.18);
+  
+  --text-main: #f0fdf4;
+  --text-muted: #86efac;
+  --text-dim: #4ade80;
+  
+  --primary: #34d399;
+  --primary-bg: rgba(52, 211, 153, 0.15);
+  --primary-border: rgba(52, 211, 153, 0.4);
+  
+  --secondary: #2dd4bf;
+  --secondary-bg: rgba(45, 212, 191, 0.15);
+  --secondary-border: rgba(45, 212, 191, 0.4);
+  
+  --accent: #a7f3d0;
+  --accent-bg: rgba(167, 243, 208, 0.15);
+  
+  --warning: #fbbf24;
+  --warning-bg: rgba(251, 191, 36, 0.15);
+  
+  --danger: #f87171;
+  --danger-bg: rgba(248, 113, 113, 0.15);
+  
+  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.5);
+  --tbl-header-bg: #0b231e;
+  --tbl-hover: rgba(52, 211, 153, 0.05);
+  --flux-uptake-bg: rgba(45, 212, 191, 0.2);
+  --flux-uptake-color: #2dd4bf;
+  --flux-sec-bg: rgba(52, 211, 153, 0.2);
+  --flux-sec-color: #34d399;
+}
+
+/* 4. CYBER BIOTECH (Deep Space Dark + Neon Pink/Cyan) */
+[data-theme="cyber"] {
+  --bg-body: #0d0914;
+  --bg-card: rgba(22, 15, 36, 0.85);
+  --bg-card-solid: #191228;
+  --bg-header: rgba(22, 15, 36, 0.92);
+  --border-subtle: rgba(236, 72, 153, 0.2);
+  
+  --text-main: #fdf4ff;
+  --text-muted: #f472b6;
+  --text-dim: #c084fc;
+  
+  --primary: #ec4899; /* Neon Pink */
+  --primary-bg: rgba(236, 72, 153, 0.15);
+  --primary-border: rgba(236, 72, 153, 0.4);
+  
+  --secondary: #06b6d4;
+  --secondary-bg: rgba(6, 182, 212, 0.15);
+  --secondary-border: rgba(6, 182, 212, 0.4);
+  
+  --accent: #8b5cf6;
+  --accent-bg: rgba(139, 92, 246, 0.15);
+  
+  --warning: #f59e0b;
+  --warning-bg: rgba(245, 158, 11, 0.15);
+  
+  --danger: #ef4444;
+  --danger-bg: rgba(239, 68, 68, 0.15);
+  
+  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.5);
+  --tbl-header-bg: #160f24;
+  --tbl-hover: rgba(236, 72, 153, 0.05);
+  --flux-uptake-bg: rgba(6, 182, 212, 0.2);
+  --flux-uptake-color: #22d3ee;
+  --flux-sec-bg: rgba(236, 72, 153, 0.2);
+  --flux-sec-color: #f472b6;
+}
+
+:root {
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-body);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  line-height: 1.5;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Header & Glassmorphism Navigation */
+.app-header {
+  background: var(--bg-header);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-subtle);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 0.85rem 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.85rem;
+}
+
+.brand-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Detailed Anatomical Gut + Microbes SVG Logo Emblem */
+.brand-logo-gut-emblem {
+  width: 52px;
+  height: 52px;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(6, 182, 212, 0.2));
+  border: 1px solid var(--primary-border);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 16px var(--primary-bg);
+  position: relative;
+}
+
+.brand-title-group h1 {
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.brand-title-group p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.header-badges {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.badge {
+  font-size: 0.78rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: 30px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.badge-primary {
+  background: var(--primary-bg);
+  color: var(--primary);
+  border: 1px solid var(--primary-border);
+}
+
+.badge-cyan {
+  background: var(--secondary-bg);
+  color: var(--secondary);
+  border: 1px solid var(--secondary-border);
+}
+
+/* Nav Tabs */
+.nav-tabs {
+  display: flex;
+  gap: 0.45rem;
+  overflow-x: auto;
+  padding-bottom: 2px;
+  scrollbar-width: none;
+}
+
+.nav-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-tab {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  font-size: 0.86rem;
+  font-weight: 600;
+  padding: 0.55rem 1.05rem;
+  border-radius: 30px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.25s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-tab:hover {
+  color: var(--text-main);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-tab.active {
+  color: #ffffff;
+  background: var(--primary);
+  border-color: transparent;
+  font-weight: 700;
+  box-shadow: 0 4px 16px var(--primary-bg);
+}
+
+/* Main Layout */
+.app-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+  animation: fadeIn 0.25s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Cards & Containers */
+.card {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-card);
+  margin-bottom: 1.5rem;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.1rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.card-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 1.75rem;
+}
+
+.stat-card {
+  background: var(--bg-card-solid);
+  border: 1px solid var(--primary-border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: var(--primary);
+}
+
+.stat-card.cyan { border-color: var(--secondary-border); }
+.stat-card.cyan::before { background: var(--secondary); }
+
+.stat-card.purple { border-color: rgba(168, 85, 247, 0.35); }
+.stat-card.purple::before { background: var(--accent); }
+
+.stat-card.amber { border-color: rgba(245, 158, 11, 0.35); }
+.stat-card.amber::before { background: var(--warning); }
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+}
+
+.stat-number {
+  font-size: 1.75rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--text-main);
+}
+
+.stat-label {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  margin-top: 0.25rem;
+}
+
+/* Workflow Pipeline Diagram */
+.workflow-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 1.5rem;
+  background: var(--bg-card-solid);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  overflow-x: auto;
+}
+
+.workflow-step {
+  flex: 1;
+  min-width: 150px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1rem 0.75rem;
+  text-align: center;
+  transition: all 0.25s ease;
+}
+
+.workflow-step-num {
+  font-size: 0.72rem;
+  color: var(--primary);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.workflow-step-title {
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin: 0.3rem 0;
+}
+
+.workflow-step-desc {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.workflow-arrow {
+  color: var(--text-dim);
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+/* Forms & Selects */
+.select-group {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1.35rem;
+  flex-wrap: wrap;
+}
+
+.custom-select, .search-input {
+  background: var(--bg-card-solid);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-main);
+  padding: 0.7rem 1.1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.92rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+  min-width: 280px;
+}
+
+.custom-select:focus, .search-input:focus {
+  border-color: var(--primary);
+}
+
+/* Tables */
+.table-container {
+  overflow-x: auto;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  background: var(--bg-card-solid);
+  max-height: 480px;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+  text-align: left;
+}
+
+.data-table th {
+  background: var(--tbl-header-bg);
+  color: var(--text-muted);
+  font-weight: 700;
+  padding: 0.85rem 1.1rem;
+  position: sticky;
+  top: 0;
+  border-bottom: 2px solid var(--border-subtle);
+  white-space: nowrap;
+}
+
+.data-table td {
+  padding: 0.75rem 1.1rem;
+  border-bottom: 1px solid var(--border-subtle);
+  color: var(--text-main);
+}
+
+.data-table tbody tr:hover {
+  background: var(--tbl-hover);
+}
+
+.flux-uptake {
+  color: var(--flux-uptake-color);
+  background: var(--flux-uptake-bg);
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  display: inline-block;
+}
+
+.flux-secretion {
+  color: var(--flux-sec-color);
+  background: var(--flux-sec-bg);
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  display: inline-block;
+}
+
+/* Comparison & Grid Views */
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.similarity-score-box {
+  background: var(--primary-bg);
+  border: 1px solid var(--primary-border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  text-align: center;
+  margin-bottom: 1.35rem;
+}
+
+.score-value {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.score-label {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}
+
+/* Heatmap Grid */
+.heatmap-container {
+  overflow: auto;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  background: var(--bg-card-solid);
+  padding: 1.25rem;
+}
+
+/* Buttons */
+.btn {
+  background: var(--primary);
+  color: #ffffff;
+  border: none;
+  padding: 0.65rem 1.35rem;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 0.88rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.25s ease;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: var(--bg-card-solid);
+  color: var(--text-main);
+  border: 1px solid var(--border-subtle);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Toggle Switch */
+.toggle-group {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 46px;
+  height: 25px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: var(--border-subtle);
+  transition: .25s;
+  border-radius: 25px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 19px;
+  width: 19px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .25s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: var(--primary);
+}
+
+input:checked + .slider:before {
+  transform: translateX(21px);
+}
+
+/* Theme Selector */
+.theme-select {
+  background: var(--bg-card-solid);
+  color: var(--text-main);
+  border: 1px solid var(--border-subtle);
+  border-radius: 20px;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+  .workflow-container {
+    flex-direction: column;
+  }
+}

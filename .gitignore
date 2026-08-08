@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.env
+.idea/
+.vscode/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+backend/database/gutgem.sqlite
+backend/database/gutgem.sqlite
+*.sqlite

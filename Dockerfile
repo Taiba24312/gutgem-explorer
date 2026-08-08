@@ -9,6 +9,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy project source code and data
 COPY . .
 
+RUN python backend/database/init_db.py
+
 # Expose port
 EXPOSE 8000
 

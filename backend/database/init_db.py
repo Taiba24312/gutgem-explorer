@@ -91,17 +91,23 @@ def init_database():
     fluxes_path = os.path.join(DATA_DIR, "exchange_fluxes_master.csv")
     with open(fluxes_path, "r", encoding="utf-8") as f:
         reader = csv.DictReader(f)
-        flux_rows = [
-            (
-                row.get("Strain") or row.get("strain_name") or row.get("strain"),
-                row.get("Exchange_ID") or row.get("exchange_id"),
-                row.get("Metabolite_Name") or row.get("metabolite_name"),
-                float(row.get("Flux") if row.get("Flux") is not None else (row.get("Flux_Value") if row.get("Flux_Value") is not None else row.get("flux", 0.0)))
-            )
-            for row in reader
-        ]
+        flux_rows = []
+        for row in reader:
+            s_name = row.get("Strain") or row.get("strain_name") or ""
+            ex_id = row.get("Exchange_ID") or row.get("exchange_id") or ""
+            rxn_name = row.get("Reaction_Name") or row.get("reaction_name") or ""
+            met_id_str = row.get("Metabolite_ID") or row.get("metabolite_id_str") or ""
+            met_name = row.get("Metabolite_Name") or row.get("metabolite_name") or ""
+            comp = row.get("Compartment") or ""
+            lb = float(row.get("Lower_Bound") or -1000.0)
+            ub = float(row.get("Upper_Bound") or 1000.0)
+            flx = float(row.get("Flux") if row.get("Flux") is not None else (row.get("Flux_Value") if row.get("Flux_Value") is not None else 0.0))
+            direction = row.get("Direction") or ("Secretion" if flx > 0 else ("Uptake" if flx < 0 else ""))
+
+            flux_rows.append((s_name, ex_id, rxn_name, met_id_str, met_name, comp, lb, ub, flx, direction))
+
         cursor.executemany(
-            "INSERT OR IGNORE INTO exchange_fluxes (strain_name, exchange_id, metabolite_name, flux_value) VALUES (?, ?, ?, ?)",
+            "INSERT OR IGNORE INTO exchange_fluxes (strain_name, exchange_id, reaction_name, metabolite_id_str, metabolite_name, compartment, lower_bound, upper_bound, flux, direction) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
             flux_rows
         )
     conn.commit()
@@ -112,30 +118,30 @@ def init_database():
     cursor.execute("""
         INSERT OR IGNORE INTO binary_matrix (strain_name, metabolite_name, is_active)
         SELECT strain_name, metabolite_name, 
-               CASE WHEN flux_value > 0 THEN 1 WHEN flux_value < 0 THEN -1 ELSE 0 END
+               CASE WHEN flux > 0 THEN 1 WHEN flux < 0 THEN -1 ELSE 0 END
         FROM exchange_fluxes
-        WHERE flux_value != 0;
+        WHERE flux != 0;
     """)
 
     cursor.execute("""
         INSERT OR IGNORE INTO uptake_matrix (strain_name, metabolite_name, flux_value)
-        SELECT strain_name, metabolite_name, flux_value
+        SELECT strain_name, metabolite_name, flux
         FROM exchange_fluxes
-        WHERE flux_value < 0;
+        WHERE flux < 0;
     """)
 
     cursor.execute("""
         INSERT OR IGNORE INTO secretion_matrix (strain_name, metabolite_name, flux_value)
-        SELECT strain_name, metabolite_name, flux_value
+        SELECT strain_name, metabolite_name, flux
         FROM exchange_fluxes
-        WHERE flux_value > 0;
+        WHERE flux > 0;
     """)
 
     cursor.execute("""
         INSERT OR IGNORE INTO flux_matrix (strain_name, metabolite_name, flux_value)
-        SELECT strain_name, metabolite_name, flux_value
+        SELECT strain_name, metabolite_name, flux
         FROM exchange_fluxes
-        WHERE flux_value != 0;
+        WHERE flux != 0;
     """)
 
     conn.commit()

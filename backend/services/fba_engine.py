@@ -12,10 +12,12 @@ import time
 import pandas as pd
 from typing import Dict, Any, List, Optional
 
+cobra_import_error = None
 try:
     import cobra
-except ImportError:
+except Exception as e:
     cobra = None
+    cobra_import_error = str(e)
 
 # Global In-Memory Simulation Result Cache (Hash -> Results)
 FBA_RESULT_CACHE: Dict[str, Dict[str, Any]] = {}
@@ -32,7 +34,7 @@ def run_live_fba(
     Uses MD5 hash caching for <1ms repeated responses and GLPK presolve for <300ms fresh runs.
     """
     if cobra is None:
-        raise RuntimeError("CobraPy package is not installed. Install via: pip install cobra")
+        raise RuntimeError(f"CobraPy package import failed on server: {cobra_import_error or 'Package not installed'}. Please verify installation.")
 
     t_start = time.time()
 

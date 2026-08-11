@@ -1420,11 +1420,12 @@ function initFBASimulator() {
   });
 
   function renderFBAResults(data) {
-    document.getElementById('fba-val-growth').textContent = data.biomass_growth_rate.toFixed(4);
+    const growthVal = data.biomass_growth_rate > 10 ? data.biomass_growth_rate.toFixed(2) : data.biomass_growth_rate.toFixed(4);
+    document.getElementById('fba-val-growth').textContent = growthVal;
     document.getElementById('fba-val-total').textContent = data.total_exchanges;
     document.getElementById('fba-val-secretion').textContent = data.secretion_count;
     document.getElementById('fba-val-uptake').textContent = data.uptake_count;
-    document.getElementById('fba-val-time').textContent = `${data.execution_time_ms} ms`;
+    document.getElementById('fba-val-time').textContent = `${data.execution_time_ms.toFixed(0)} ms`;
     document.getElementById('fba-val-cached').textContent = data.cached ? "⚡ Instant MD5 Cache" : "Fresh Execution";
 
     // Populate Secretion Table

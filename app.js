@@ -1437,7 +1437,7 @@ function initFBASimulator() {
     } else {
       secretions.forEach(s => {
         const tr = document.createElement('tr');
-        tr.innerHTML = `<td><strong>${s.Metabolite_Name}</strong></td><td><code>${s.Exchange_ID}</code></td><td style="color:var(--emerald); font-weight:700;">+${s.Flux.toFixed(4)}</td>`;
+        tr.innerHTML = `<td style="word-break:break-word; font-weight:600; font-size:0.85rem;">${s.Metabolite_Name}</td><td><code style="font-size:0.72rem; word-break:break-all; display:block; opacity:0.85;" title="${s.Exchange_ID}">${s.Exchange_ID}</code></td><td style="color:var(--emerald); font-weight:700; text-align:right; font-size:0.85rem;">+${s.Flux.toFixed(4)}</td>`;
         tbodySec.appendChild(tr);
       });
     }
@@ -1451,7 +1451,7 @@ function initFBASimulator() {
     } else {
       uptakes.forEach(u => {
         const tr = document.createElement('tr');
-        tr.innerHTML = `<td><strong>${u.Metabolite_Name}</strong></td><td><code>${u.Exchange_ID}</code></td><td style="color:var(--cyan); font-weight:700;">${u.Flux.toFixed(4)}</td>`;
+        tr.innerHTML = `<td style="word-break:break-word; font-weight:600; font-size:0.85rem;">${u.Metabolite_Name}</td><td><code style="font-size:0.72rem; word-break:break-all; display:block; opacity:0.85;" title="${u.Exchange_ID}">${u.Exchange_ID}</code></td><td style="color:var(--cyan); font-weight:700; text-align:right; font-size:0.85rem;">${u.Flux.toFixed(4)}</td>`;
         tbodyUpt.appendChild(tr);
       });
     }

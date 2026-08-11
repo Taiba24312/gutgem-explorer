@@ -847,26 +847,26 @@
             </div>
           </div>
 
-          <!-- Tables Grid -->
-          <div style="display:grid; grid-template-columns: 1fr 1fr; gap:1.2rem;">
-            <div>
+          <!-- Tables Grid (With min-width:0 to prevent grid column overflow) -->
+          <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap:1.2rem;">
+            <div style="min-width:0;">
               <h5 style="font-size:0.95rem; font-weight:800; color:var(--emerald); margin-bottom:0.5rem;"><i data-lucide="arrow-up-right"></i> Secreted Metabolites (+ Flux)</h5>
-              <div class="table-container" style="max-height:350px; overflow-y:auto;">
-                <table class="data-table">
+              <div class="table-container" style="max-height:380px; overflow-y:auto; overflow-x:hidden;">
+                <table class="data-table" style="table-layout:fixed; width:100%;">
                   <thead>
-                    <tr><th>Metabolite Name</th><th>Exchange ID</th><th>Flux (mmol/gDW/h)</th></tr>
+                    <tr><th style="width:45%;">Metabolite Name</th><th style="width:30%;">Exchange ID</th><th style="width:25%; text-align:right;">Flux (mmol/gDW/h)</th></tr>
                   </thead>
                   <tbody id="tbody-fba-secretion"></tbody>
                 </table>
               </div>
             </div>
 
-            <div>
+            <div style="min-width:0;">
               <h5 style="font-size:0.95rem; font-weight:800; color:var(--cyan); margin-bottom:0.5rem;"><i data-lucide="arrow-down-left"></i> Uptaken Metabolites (- Flux)</h5>
-              <div class="table-container" style="max-height:350px; overflow-y:auto;">
-                <table class="data-table">
+              <div class="table-container" style="max-height:380px; overflow-y:auto; overflow-x:hidden;">
+                <table class="data-table" style="table-layout:fixed; width:100%;">
                   <thead>
-                    <tr><th>Metabolite Name</th><th>Exchange ID</th><th>Flux (mmol/gDW/h)</th></tr>
+                    <tr><th style="width:45%;">Metabolite Name</th><th style="width:30%;">Exchange ID</th><th style="width:25%; text-align:right;">Flux (mmol/gDW/h)</th></tr>
                   </thead>
                   <tbody id="tbody-fba-uptake"></tbody>
                 </table>

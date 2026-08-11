@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   initCompareStrains();
   initExchangeomeExplorer();
   initHeatmapExplorer();
+  initFBASimulator();
 });
 
 // Dual-Mode Execution Initialization & Health Check
@@ -1324,3 +1325,169 @@ function setupUploader() {
     }
   }
 }
+
+// --- LIVE FBA SIMULATOR CONTROLLER ---
+let lastFBASimulationData = null;
+
+function initFBASimulator() {
+  const dropzone = document.getElementById('fba-dropzone');
+  const fileInput = document.getElementById('fba-file-input');
+  const dropzoneText = document.getElementById('fba-dropzone-text');
+  const btnRun = document.getElementById('btn-run-fba');
+  const loadingIndicator = document.getElementById('fba-loading');
+  const resultsPanel = document.getElementById('fba-results-panel');
+  const btnDownloadCsv = document.getElementById('btn-fba-download-csv');
+  const btnIngest = document.getElementById('btn-fba-ingest');
+
+  if (!dropzone || !fileInput || !btnRun) return;
+
+  let selectedFile = null;
+
+  dropzone.addEventListener('click', () => fileInput.click());
+
+  dropzone.addEventListener('dragover', (e) => {
+    e.preventDefault();
+    dropzone.style.borderColor = 'var(--primary)';
+    dropzone.style.background = 'var(--primary-bg)';
+  });
+
+  dropzone.addEventListener('dragleave', () => {
+    dropzone.style.borderColor = 'var(--border-subtle)';
+    dropzone.style.background = 'var(--bg-card)';
+  });
+
+  dropzone.addEventListener('drop', (e) => {
+    e.preventDefault();
+    dropzone.style.borderColor = 'var(--border-subtle)';
+    dropzone.style.background = 'var(--bg-card)';
+    if (e.dataTransfer.files.length > 0) {
+      handleFileSelected(e.dataTransfer.files[0]);
+    }
+  });
+
+  fileInput.addEventListener('change', (e) => {
+    if (e.target.files.length > 0) {
+      handleFileSelected(e.target.files[0]);
+    }
+  });
+
+  function handleFileSelected(file) {
+    const ext = file.name.split('.').pop().toLowerCase();
+    if (ext !== 'xml' && ext !== 'sbml') {
+      alert("Invalid file format! Please select an SBML XML (.xml or .sbml) model file.");
+      return;
+    }
+    selectedFile = file;
+    dropzoneText.innerHTML = `📄 <strong style="color:var(--primary);">${file.name}</strong> (${(file.size / 1024).toFixed(1)} KB)`;
+  }
+
+  btnRun.addEventListener('click', async () => {
+    if (!selectedFile) {
+      alert("Please select or drop an SBML XML model file (.xml or .sbml) first!");
+      return;
+    }
+
+    const mediumBound = parseFloat(document.getElementById('fba-medium-bound').value || '-1000.0');
+    const objectiveId = document.getElementById('fba-objective-input').value.trim();
+
+    const formData = new FormData();
+    formData.append('file', selectedFile);
+    formData.append('medium_bound', mediumBound);
+    if (objectiveId) formData.append('objective_reaction_id', objectiveId);
+
+    loadingIndicator.style.display = 'block';
+    resultsPanel.style.display = 'none';
+
+    try {
+      const response = await fetch('/api/v1/fba/simulate', {
+        method: 'POST',
+        body: formData
+      });
+
+      const resData = await response.json();
+
+      if (!response.ok || resData.status === 'error') {
+        throw new Error(resData.detail || resData.message || "Simulation failed.");
+      }
+
+      lastFBASimulationData = resData;
+      renderFBAResults(resData);
+    } catch (err) {
+      alert(`FBA Simulation Error: ${err.message}`);
+    } finally {
+      loadingIndicator.style.display = 'none';
+    }
+  });
+
+  function renderFBAResults(data) {
+    document.getElementById('fba-val-growth').textContent = data.biomass_growth_rate.toFixed(4);
+    document.getElementById('fba-val-total').textContent = data.total_exchanges;
+    document.getElementById('fba-val-secretion').textContent = data.secretion_count;
+    document.getElementById('fba-val-uptake').textContent = data.uptake_count;
+    document.getElementById('fba-val-time').textContent = `${data.execution_time_ms} ms`;
+    document.getElementById('fba-val-cached').textContent = data.cached ? "⚡ Instant MD5 Cache" : "Fresh Execution";
+
+    // Populate Secretion Table
+    const tbodySec = document.getElementById('tbody-fba-secretion');
+    tbodySec.innerHTML = '';
+    const secretions = data.exchange_fluxes.filter(e => e.Direction === 'Secretion');
+    if (secretions.length === 0) {
+      tbodySec.innerHTML = '<tr><td colspan="3" style="text-align:center; color:var(--text-dim);">No secretion reactions detected</td></tr>';
+    } else {
+      secretions.forEach(s => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `<td><strong>${s.Metabolite_Name}</strong></td><td><code>${s.Exchange_ID}</code></td><td style="color:var(--emerald); font-weight:700;">+${s.Flux.toFixed(4)}</td>`;
+        tbodySec.appendChild(tr);
+      });
+    }
+
+    // Populate Uptake Table
+    const tbodyUpt = document.getElementById('tbody-fba-uptake');
+    tbodyUpt.innerHTML = '';
+    const uptakes = data.exchange_fluxes.filter(e => e.Direction === 'Uptake');
+    if (uptakes.length === 0) {
+      tbodyUpt.innerHTML = '<tr><td colspan="3" style="text-align:center; color:var(--text-dim);">No uptake reactions detected</td></tr>';
+    } else {
+      uptakes.forEach(u => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `<td><strong>${u.Metabolite_Name}</strong></td><td><code>${u.Exchange_ID}</code></td><td style="color:var(--cyan); font-weight:700;">${u.Flux.toFixed(4)}</td>`;
+        tbodyUpt.appendChild(tr);
+      });
+    }
+
+    resultsPanel.style.display = 'block';
+  }
+
+  // Wire Download CSV Button
+  if (btnDownloadCsv) {
+    btnDownloadCsv.addEventListener('click', async () => {
+      if (!lastFBASimulationData) return;
+      try {
+        const response = await fetch('/api/v1/fba/download-csv', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(lastFBASimulationData)
+        });
+        const blob = await response.blob();
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `${lastFBASimulationData.strain_name}_fba_exchange_fluxes.csv`;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+      } catch (err) {
+        alert(`Download Error: ${err.message}`);
+      }
+    });
+  }
+
+  // Wire Ingest into Knowledgebase Button
+  if (btnIngest) {
+    btnIngest.addEventListener('click', () => {
+      if (!lastFBASimulationData || !lastFBASimulationData.exchange_fluxes) return;
+      ingestCustomDataset(lastFBASimulationData.exchange_fluxes, `${lastFBASimulationData.strain_name}.xml`);
+    });
+  }
+}
+

@@ -83,6 +83,7 @@
       <button class="nav-tab" data-tab="compare-strains"><i data-lucide="git-compare"></i> Compare Strains</button>
       <button class="nav-tab" data-tab="exchangeome-explorer"><i data-lucide="globe"></i> Exchangeome Explorer</button>
       <button class="nav-tab" data-tab="heatmap-explorer"><i data-lucide="grid"></i> Heatmap Explorer</button>
+      <button class="nav-tab" data-tab="fba-simulator"><i data-lucide="play-circle"></i> Live FBA Simulator</button>
       <button class="nav-tab" data-tab="downloads-hub"><i data-lucide="download"></i> Downloads</button>
       <button class="nav-tab" data-tab="about-methodology"><i data-lucide="book-open"></i> About & Methodology</button>
     </nav>
@@ -750,6 +751,130 @@
             <a href="./data/scfa_matrix.csv" download class="btn btn-secondary" style="font-size:0.8rem;"><i data-lucide="file-spreadsheet"></i> Download CSV</a>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- 10. LIVE FBA SIMULATOR -->
+    <section id="fba-simulator" class="tab-content">
+      <div class="card" style="border-color: var(--primary-border);">
+        <div class="card-header">
+          <h3 class="card-title"><i data-lucide="play-circle" style="color:var(--primary);"></i> Real-Time SBML XML FBA Computation Engine</h3>
+          <span class="badge badge-emerald"><i data-lucide="zap"></i> Sub-Second CobraPy Engine</span>
+        </div>
+        <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:1.2rem;">
+          Upload any SBML XML metabolic model file (<code>.xml</code> or <code>.sbml</code>) to run real-time Flux Balance Analysis (FBA), optimize biomass growth rate, extract active nutrient exchange fluxes, and immediately analyze or download the dataset.
+        </p>
+
+        <!-- Simulation Form Grid -->
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:1.2rem; margin-bottom:1.2rem;">
+          <div>
+            <label style="display:block; font-size:0.85rem; font-weight:700; color:var(--text-muted); margin-bottom:0.4rem;">Select SBML XML Model File (.xml / .sbml)</label>
+            <div id="fba-dropzone" style="border:2px dashed var(--border-subtle); background:var(--bg-card); border-radius:var(--radius-md); padding:1.5rem; text-align:center; cursor:pointer;">
+              <i data-lucide="file-code" style="font-size:1.8rem; color:var(--primary); margin-bottom:0.3rem;"></i>
+              <p style="font-size:0.85rem; font-weight:700; color:var(--text-main);" id="fba-dropzone-text">Click or drag SBML .xml / .sbml model here</p>
+              <input type="file" id="fba-file-input" accept=".xml,.sbml" style="display:none;">
+            </div>
+          </div>
+
+          <div>
+            <div style="margin-bottom:0.8rem;">
+              <label style="display:block; font-size:0.85rem; font-weight:700; color:var(--text-muted); margin-bottom:0.3rem;">Nutrient Medium Bound (mmol/gDW/h)</label>
+              <select id="fba-medium-bound" class="theme-select" style="width:100%;">
+                <option value="-1000.0">Unlimited Medium (-1000.0 mmol/gDW/h)</option>
+                <option value="-100.0">Constrained Gut Medium (-100.0 mmol/gDW/h)</option>
+                <option value="-10.0">Minimal Medium (-10.0 mmol/gDW/h)</option>
+              </select>
+            </div>
+
+            <div style="margin-bottom:0.8rem;">
+              <label style="display:block; font-size:0.85rem; font-weight:700; color:var(--text-muted); margin-bottom:0.3rem;">Objective Reaction ID (Optional)</label>
+              <input type="text" id="fba-objective-input" class="theme-select" style="width:100%;" placeholder="Leave empty for default model biomass">
+            </div>
+
+            <button id="btn-run-fba" class="btn btn-primary" style="width:100%; justify-content:center; padding:0.65rem 1rem;">
+              <i data-lucide="play"></i> Run Real-Time FBA Simulation
+            </button>
+          </div>
+        </div>
+
+        <!-- Simulation Loader Indicator -->
+        <div id="fba-loading" style="display:none; text-align:center; padding:2rem; background:var(--bg-card); border-radius:var(--radius-md); border:1px solid var(--border-subtle);">
+          <div style="display:inline-block; width:30px; height:30px; border:3px solid var(--primary-border); border-top-color:var(--primary); border-radius:50%; animation:spin 1s linear infinite; margin-bottom:0.5rem;"></div>
+          <p style="font-weight:700; color:var(--text-main);">Running CobraPy FBA Simulation...</p>
+          <span style="font-size:0.8rem; color:var(--text-muted);">Optimizing biomass objective & extracting exchange fluxes...</span>
+        </div>
+
+        <!-- Simulation Results Panel -->
+        <div id="fba-results-panel" style="display:none; margin-top:1.5rem;">
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+            <h4 style="font-size:1.1rem; font-weight:800; color:var(--text-main);"><i data-lucide="check-circle" style="color:var(--emerald);"></i> Simulation Complete</h4>
+            <div style="display:flex; gap:0.5rem;">
+              <button id="btn-fba-download-csv" class="btn btn-emerald" style="font-size:0.8rem;"><i data-lucide="download"></i> Download CSV</button>
+              <button id="btn-fba-ingest" class="btn btn-primary" style="font-size:0.8rem;"><i data-lucide="layers"></i> Analyze in Heatmap & Distance Compare</button>
+            </div>
+          </div>
+
+          <!-- Stat Cards Grid -->
+          <div class="stats-grid" style="margin-bottom:1.5rem;">
+            <div class="stat-card">
+              <span class="stat-label">Biomass Growth Rate (μ)</span>
+              <div class="stat-value" id="fba-val-growth" style="color:var(--emerald);">0.0000</div>
+              <span class="stat-sub">h⁻¹ (Max production)</span>
+            </div>
+
+            <div class="stat-card">
+              <span class="stat-label">Total Active Exchanges</span>
+              <div class="stat-value" id="fba-val-total">0</div>
+              <span class="stat-sub">Exchange reactions</span>
+            </div>
+
+            <div class="stat-card">
+              <span class="stat-label">Secretion Reactions (+v)</span>
+              <div class="stat-value" id="fba-val-secretion" style="color:var(--primary);">0</div>
+              <span class="stat-sub">Metabolite production</span>
+            </div>
+
+            <div class="stat-card">
+              <span class="stat-label">Uptake Reactions (-v)</span>
+              <div class="stat-value" id="fba-val-uptake" style="color:var(--cyan);">0</div>
+              <span class="stat-sub">Nutrient consumption</span>
+            </div>
+
+            <div class="stat-card">
+              <span class="stat-label">Execution Speed</span>
+              <div class="stat-value" id="fba-val-time" style="font-size:1.2rem; color:var(--accent);">0 ms</div>
+              <span class="stat-sub" id="fba-val-cached">Fresh execution</span>
+            </div>
+          </div>
+
+          <!-- Tables Grid -->
+          <div style="display:grid; grid-template-columns: 1fr 1fr; gap:1.2rem;">
+            <div>
+              <h5 style="font-size:0.95rem; font-weight:800; color:var(--emerald); margin-bottom:0.5rem;"><i data-lucide="arrow-up-right"></i> Secreted Metabolites (+ Flux)</h5>
+              <div class="table-container" style="max-height:350px; overflow-y:auto;">
+                <table class="data-table">
+                  <thead>
+                    <tr><th>Metabolite Name</th><th>Exchange ID</th><th>Flux (mmol/gDW/h)</th></tr>
+                  </thead>
+                  <tbody id="tbody-fba-secretion"></tbody>
+                </table>
+              </div>
+            </div>
+
+            <div>
+              <h5 style="font-size:0.95rem; font-weight:800; color:var(--cyan); margin-bottom:0.5rem;"><i data-lucide="arrow-down-left"></i> Uptaken Metabolites (- Flux)</h5>
+              <div class="table-container" style="max-height:350px; overflow-y:auto;">
+                <table class="data-table">
+                  <thead>
+                    <tr><th>Metabolite Name</th><th>Exchange ID</th><th>Flux (mmol/gDW/h)</th></tr>
+                  </thead>
+                  <tbody id="tbody-fba-uptake"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 

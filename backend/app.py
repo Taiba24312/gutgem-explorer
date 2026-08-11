@@ -3,7 +3,7 @@ from fastapi import FastAPI, Response
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from backend.config import settings
-from backend.routers import status, strain, metabolite, scfa, compare, heatmap, analytics, downloads
+from backend.routers import status, strain, metabolite, scfa, compare, heatmap, analytics, downloads, fba
 
 app = FastAPI(
     title=settings.PROJECT_NAME,
@@ -38,6 +38,7 @@ app.include_router(compare.router, prefix=settings.API_PREFIX)
 app.include_router(heatmap.router, prefix=settings.API_PREFIX)
 app.include_router(analytics.router, prefix=settings.API_PREFIX)
 app.include_router(downloads.router, prefix=settings.API_PREFIX)
+app.include_router(fba.router, prefix=settings.API_PREFIX)
 
 # Mount root directory for static web files (index.html, styles.css, app.js, data/)
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
